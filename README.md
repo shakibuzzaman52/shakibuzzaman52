@@ -4,7 +4,7 @@
   <img src="YOUR_BANNER_IMAGE_LINK" alt="Profile Banner" width="100%" />
 </p>
 
-<h3 align="center">
+<h3>
 Competitive Programmer • CSE Undergraduate • Learning C++ & Data Structures and Algorithms
 </h3>
 
