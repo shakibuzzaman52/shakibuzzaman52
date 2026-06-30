@@ -50,10 +50,8 @@
 
 ### 🌐 Connect with Me
 
-| Platform | Link |
-| :--- | :--- |
-| <img src="https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/gmail.svg" width="16" height="16" /> **Gmail** | [✉️ Send Mail](mailto:YOUR_EMAIL) |
-| <img src="https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/linkedin.svg" width="16" height="16" /> **LinkedIn** | [💼 Connect](https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME) |
-| <img src="https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/github.svg" width="16" height="16" /> **GitHub** | [🖥️ Follow](https://github.com/YOUR_GITHUB_USERNAME) |
-| <img src="https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/facebook.svg" width="16" height="16" /> **Facebook** | [👥 Profile](https://www.facebook.com/YOUR_FACEBOOK_USERNAME) |
-| <img src="https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/instagram.svg" width="16" height="16" /> **Instagram** | [📸 Follow](https://www.instagram.com/YOUR_INSTAGRAM_USERNAME) |
+*   `👉` **[Gmail]** — [YOUR_EMAIL](mailto:YOUR_EMAIL)
+*   `💼` **[LinkedIn]** — [in/YOUR_LINKEDIN_USERNAME](https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME)
+*   `💻` **[GitHub]** — [@YOUR_GITHUB_USERNAME](https://github.com/YOUR_GITHUB_USERNAME)
+*   `🔹` **[Facebook]** — [YOUR_FACEBOOK_USERNAME](https://www.facebook.com/YOUR_FACEBOOK_USERNAME)
+*   `🔸` **[Instagram]** — [@YOUR_INSTAGRAM_USERNAME](https://www.instagram.com/YOUR_INSTAGRAM_USERNAME)
