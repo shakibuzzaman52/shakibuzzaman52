@@ -53,6 +53,8 @@
   <a href="mailto:YOUR_EMAIL"><img src="https://skillicons.dev/icons?i=gmail" /></a>
   <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME"><img src="https://skillicons.dev/icons?i=linkedin" /></a>
   <a href="https://github.com/YOUR_GITHUB_USERNAME"><img src="https://skillicons.dev/icons?i=github" /></a>
-  <a href="https://www.facebook.com/YOUR_FACEBOOK_USERNAME"><img src="https://skillicons.dev/icons?i=fb" /></a>
+  <a href="https://www.facebook.com/YOUR_FACEBOOK_USERNAME">
+    <img src="https://img.shields.io/badge/Facebook-%231877F2.svg?style=for-the-badge&logo=Facebook&logoColor=white" height="40" />
+  </a>
   <a href="https://www.instagram.com/YOUR_INSTAGRAM_USERNAME"><img src="https://skillicons.dev/icons?i=instagram" /></a>
 </p>
