@@ -1,7 +1,7 @@
 ## Hi, I'm Shakib Uz Zaman 👋
 
 <p align="center">
-  <img src="file_000000005a3c71fbbe0645bfd883748c.png" width="100%" alt="Profile Banner" />
+  <img src="file_0000000068e871fba615d4d20b7a53fa.png" width="100%" alt="Profile Banner" />
 </p>
 
 ---
