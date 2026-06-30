@@ -1,4 +1,4 @@
-<h1 align="center">Hi there! 👋 I'm G M Shakib Uz Zaman</h1>
+<h2 align="center">Hi! 👋 I'm G M Shakib Uz Zaman</h2>
 
 <p align="center">
   <img src="YOUR_BANNER_IMAGE_LINK" alt="Profile Banner" width="100%" />
@@ -10,13 +10,12 @@ Competitive Programmer • CSE Undergraduate • Learning C++ & Data Structures 
 
 ---
 
-## 🚀 About Me
+##  About Me
 
 -  Undergraduate in Computer Science & Engineering
 -  Learning **C++**, **Data Structures & Algorithms**
 -  Solving programming problems and improving my coding skills
 -  Exploring Software Development and Open Source
-- 📚
 -  Always learning something new
 
 ---
