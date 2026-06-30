@@ -10,10 +10,10 @@
 
 ---
 
-<h3 align="left">💻 <b>Programming Languages</b></h3>
+<h3 align="left">💻 <b>Languages & Technologies</b></h3>
 
 <p>
-  <img src="https://skillicons.dev/icons?i=c,cpp,python" />
+  <img src="https://skillicons.dev/icons?i=c,cpp,python,html,css" />
 </p>
 
 ---
@@ -21,11 +21,12 @@
 <h3 align="left">🧠 <b>Competitive Programming</b></h3>
 
 <p>
-  <a href="https://codeforces.com/profile/YOUR_USERNAME">
-    <img src="https://skillicons.dev/icons?i=cpp" />
+  <a href="https://leetcode.com/u/YOUR_LEETCODE_USERNAME/">
+    <img src="https://img.shields.io/badge/LeetCode-Profile-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" />
   </a>
-  <a href="https://vjudge.net/user/YOUR_USERNAME">
-    <img src="https://img.shields.io/badge/VJudge-Problem%20Solver-blue?style=for-the-badge" />
+
+  <a href="https://www.codechef.com/users/YOUR_CODECHEF_USERNAME">
+    <img src="https://img.shields.io/badge/CodeChef-Profile-5B4638?style=for-the-badge&logo=codechef&logoColor=white" />
   </a>
 </p>
 
@@ -37,25 +38,18 @@
   <img src="https://skillicons.dev/icons?i=cpp,git,github,vscode" />
 </p>
 
+<p>
+  📖 Data Structures & Algorithms <br>
+  💡 Object-Oriented Programming <br>
+  🚀 Problem Solving
+</p>
+
 ---
 
 <h3 align="left">🛠️ <b>Developer Tools</b></h3>
 
 <p>
   <img src="https://skillicons.dev/icons?i=vscode,visualstudio,git,github,pycharm" />
-</p>
-
----
-
-<h3 align="left">📊 <b>GitHub Stats</b></h3>
-
-<p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=YOUR_GITHUB_USERNAME&show_icons=true&theme=tokyonight&hide_border=true" />
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_GITHUB_USERNAME&layout=compact&theme=tokyonight&hide_border=true" />
-</p>
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=YOUR_GITHUB_USERNAME&theme=tokyonight&hide_border=true" />
 </p>
 
 ---
@@ -83,5 +77,5 @@
 ---
 
 <p align="center">
-  <b>🚀 Code • Learn • Build • Repeat</b>
+  <i>"Consistency beats talent when talent doesn't stay consistent."</i> 🚀
 </p>
