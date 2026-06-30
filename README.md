@@ -1,65 +1,55 @@
-<h2 align="center">Hi! 👋 I'm G M Shakib Uz Zaman</h2>
+# Hi, I'm Shakib Uz Zaman 👋
 
 <p align="center">
-  <img src="YOUR_BANNER_IMAGE_LINK" alt="Profile Banner" width="100%" />
+  <img src="YOUR_BANNER_IMAGE_LINK" width="100%" alt="Profile Banner"/>
 </p>
 
-<h3>
-Competitive Programmer • CSE Undergraduate • Learning C++ & Data Structures and Algorithms
-</h3>
+---
+
+<b>Competitive Programmer || CSE Undergraduate || Learning C++ & Data Structures and Algorithms</b>
 
 ---
 
-##  About Me
-
--  Undergraduate in Computer Science & Engineering
--  Learning **C++**, **Data Structures & Algorithms**
--  Solving programming problems and improving my coding skills
--  Exploring Software Development and Open Source
--  Always learning something new
-
----
-
-##  Languages
+<h3 align="left">💻 <b>Languages</b></h3>
 
 <p>
-  <img src="https://skillicons.dev/icons?i=c,cpp,python" />
+  <img src="https://skillicons.dev/icons?i=c,cpp" />
 </p>
 
 ---
 
-##  Technologies I'm Exploring
+<h3 align="left">📚 <b>Currently Learning</b></h3>
 
 <p>
-  <img src="https://skillicons.dev/icons?i=html,css,js,git,github,vscode" />
+  <img src="https://skillicons.dev/icons?i=python,git,github,vscode" />
 </p>
 
 ---
 
-##  GitHub Statistics
+<h3 align="left">🎯 <b>Interested In</b></h3>
 
-<p align="center">
+<p>
+  <img src="https://skillicons.dev/icons?i=html,css,js" />
+</p>
+
+---
+
+<h3 align="left">📊 <b>GitHub Stats</b></h3>
+
+<p>
   <img height="170" src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=tokyonight&hide_border=true" />
   <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_USERNAME&layout=compact&theme=tokyonight&hide_border=true" />
 </p>
 
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=YOUR_USERNAME&theme=tokyonight&hide_border=true" />
-</p>
-
 ---
 
-##  Connect With Me
+<h3 align="left">📬 <b>Connect with Me</b></h3>
 
 <p>
   <a href="mailto:YOUR_EMAIL"><img src="https://skillicons.dev/icons?i=gmail" /></a>
-  <a href="https://linkedin.com/in/YOUR_LINKEDIN"><img src="https://skillicons.dev/icons?i=linkedin" /></a>
+  <a href="https://www.linkedin.com/in/YOUR_LINKEDIN"><img src="https://skillicons.dev/icons?i=linkedin" /></a>
   <a href="https://github.com/YOUR_USERNAME"><img src="https://skillicons.dev/icons?i=github" /></a>
-  <a href="https://instagram.com/YOUR_INSTAGRAM"><img src="https://skillicons.dev/icons?i=instagram" /></a>
+  <a href="https://www.instagram.com/YOUR_INSTAGRAM"><img src="https://skillicons.dev/icons?i=instagram" /></a>
 </p>
 
 ---
-
-<p align="center">
-  <i>"Code. Learn. Improve. Repeat."</i> 🚀
-</p>
