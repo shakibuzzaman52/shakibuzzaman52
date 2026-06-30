@@ -58,7 +58,4 @@
   <a href="https://www.facebook.com/YOUR_FACEBOOK_USERNAME">
     <img src="https://cdn.simpleicons.org/facebook/1877F2" width="48" height="48" />
   </a>
-  <a href="https://x.com/YOUR_X_USERNAME">
-  <img src="https://cdn.simpleicons.org/x" width="48" height="48" />
-</a>
 </p>
