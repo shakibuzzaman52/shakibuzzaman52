@@ -1,16 +1,16 @@
-## Hi, I'm Shakib Uz Zaman 👋
+# Hi, I'm Shakib Uz Zaman 👋
 
 <p align="center">
-  <img src="file_0000000068e871fba615d4d20b7a53fa.png" width="100%" alt="Profile Banner" />
+  <img src="YOUR_BANNER_IMAGE_LINK" width="100%" alt="Profile Banner" />
 </p>
 
 ---
 
-<b>Competitive Programmer | CSE Undergraduate | Learning C++ & Data Structures and Algorithms</b>
+<b>Competitive Programmer || CSE Undergraduate || Learning C++ & Data Structures and Algorithms</b>
 
 ---
 
-<h3 align="left"><b>Languages & Technologies</b></h3>
+<h3 align="left">💻 <b>Languages & Technologies</b></h3>
 
 <p>
   <img src="https://skillicons.dev/icons?i=c,cpp,python,html,css" />
@@ -18,7 +18,7 @@
 
 ---
 
-<h3 align="left"><b>Competitive Programming</b></h3>
+<h3 align="left">🧠 <b>Competitive Programming</b></h3>
 
 <p>
   <a href="https://leetcode.com/u/YOUR_LEETCODE_USERNAME/">
@@ -32,7 +32,7 @@
 
 ---
 
-<h3 align="left"><b>Currently Learning</b></h3>
+<h3 align="left">📚 <b>Currently Learning</b></h3>
 
 <p>
   <img src="https://skillicons.dev/icons?i=c,cpp,python" />
@@ -40,34 +40,18 @@
 
 ---
 
-<h3 align="left"><b>Developer Tools</b></h3>
+<h3 align="left">🛠️ <b>Developer Tools</b></h3>
 
 <p>
   <img src="https://skillicons.dev/icons?i=vscode,visualstudio,git,github" />
 </p>
 
 ---
-
-<h3 align="left"><b>Let's Connect</b></h3>
+<h3 align="left">🌐 <b>Let's Connect</b></h3>
 
 <p>
-  <a href="mailto:shakibuzzaman52@gmail.com" style="text-decoration:none;">
-    <img src="https://skillicons.dev/icons?i=gmail" style="border:0;" />
-  </a>
-
-  <a href="https://www.linkedin.com/in/shakibuzzaman52" style="text-decoration:none;">
-    <img src="https://skillicons.dev/icons?i=linkedin" style="border:0;" />
-  </a>
-
-  <a href="https://github.com/shakibuzzaman52" style="text-decoration:none;">
-    <img src="https://skillicons.dev/icons?i=github" style="border:0;" />
-  </a>
-
-  <a href="https://www.instagram.com/shakibuzzaman_52" style="text-decoration:none;">
-    <img src="https://skillicons.dev/icons?i=instagram" style="border:0;" />
-  </a>
-
-  <a href="https://www.facebook.com/shakibuzzaman52" style="text-decoration:none;">
-    <img src="https://cdn.simpleicons.org/facebook/1877F2" width="48" height="48" style="border:0;" />
-  </a>
+  <a href="mailto:YOUR_EMAIL"><img src="https://skillicons.dev/icons?i=gmail" /></a>
+  <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME"><img src="https://skillicons.dev/icons?i=linkedin" /></a>
+  <a href="https://github.com/YOUR_GITHUB_USERNAME"><img src="https://skillicons.dev/icons?i=github" /></a>
+  <a href="https://www.instagram.com/YOUR_INSTAGRAM_USERNAME"><img src="https://skillicons.dev/icons?i=instagram" /></a>
 </p>
