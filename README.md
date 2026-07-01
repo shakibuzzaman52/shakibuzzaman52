@@ -25,7 +25,7 @@
     <img src="https://img.shields.io/badge/LeetCode-Profile-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" />
   </a>
 
-  <a href="https://www.codechef.com/users/YOUR_CODECHEF_USERNAME">
+  <a href="https://www.codechef.com/users/shakibuzzaman">
     <img src="https://img.shields.io/badge/CodeChef-Profile-5B4638?style=for-the-badge&logo=codechef&logoColor=white" />
   </a>
 </p>
