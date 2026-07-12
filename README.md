@@ -20,7 +20,9 @@
 
 <h3 align="left"> <b>Competitive Programming</b></h3>
 
-<p>
+<p> <a href="https://codeforces.com/profile/shakibuzzaman52">
+  <img src="https://img.shields.io/badge/Codeforces-Profile-1F8ACB?style=for-the-badge&logo=codeforces&logoColor=white" />
+</a>
   <a href="https://leetcode.com/u/shakibuzzaman52/">
     <img src="https://img.shields.io/badge/LeetCode-Profile-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" />
   </a>
