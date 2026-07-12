@@ -6,11 +6,11 @@
 
 ---
 
-<b>Competitive Programmer | CSE Undergraduate | Learning C++ & Data Structures and Algorithms</b>
+<b>Competitive Programmer | CSE Undergraduate | Problem Solving & Data Structures and Algorithms</b>
 
 ---
 
-<h3 align="left"><b>Languages & Technologies</b></h3>
+<h3 align="left"> <b>Languages & Technologies</b></h3>
 
 <p>
   <img src="https://skillicons.dev/icons?i=c,cpp,python,html,css" />
@@ -18,7 +18,7 @@
 
 ---
 
-<h3 align="left"><b>Competitive Programming</b></h3>
+<h3 align="left"> <b>Competitive Programming</b></h3>
 
 <p>
   <a href="https://codeforces.com/profile/shakibuzzaman52">
@@ -36,7 +36,7 @@
 
 ---
 
-<h3 align="left"><b>Currently Learning</b></h3>
+<h3 align="left"> <b>Currently Learning</b></h3>
 
 <p>
   <img src="https://skillicons.dev/icons?i=c,cpp,python" />
@@ -44,12 +44,22 @@
 
 ---
 
-<h3 align="left"><b>Developer Tools</b></h3>
+<h3 align="left"> <b>Developer Tools</b></h3>
 
 <p>
   <img src="https://skillicons.dev/icons?i=vscode,visualstudio,git,github" />
 </p>
 
 ---
+<h3 align="left"> <b>Let's Connect</b></h3>
 
---- <h3 align="left"> <b>Let's Connect</b></h3> <p> <a href="mailto:shakibuzzaman52@gmail.com"><img src="https://skillicons.dev/icons?i=gmail" /></a> <a href="https://www.linkedin.com/in/shakibuzzaman52"><img src="https://skillicons.dev/icons?i=linkedin" /></a> <a href="https://github.com/shakibuzzaman52"><img src="https://skillicons.dev/icons?i=github" /></a> <a href="https://www.instagram.com/shakibuzzaman_52"><img src="https://skillicons.dev/icons?i=instagram" /></a> <a href="https://www.facebook.com/shakibuzzaman52"> <img src="https://cdn.simpleicons.org/facebook/1877F2" width="48" height="48" /> </a> </p>
+<p>
+  <a href="mailto:shakibuzzaman52@gmail.com"><img src="https://skillicons.dev/icons?i=gmail" /></a>
+  <a href="https://www.linkedin.com/in/shakibuzzaman52"><img src="https://skillicons.dev/icons?i=linkedin" /></a>
+  <a href="https://github.com/shakibuzzaman52"><img src="https://skillicons.dev/icons?i=github" /></a>
+  <a href="https://www.instagram.com/shakibuzzaman_52"><img src="https://skillicons.dev/icons?i=instagram" /></a>
+
+  <a href="https://www.facebook.com/shakibuzzaman52">
+    <img src="https://cdn.simpleicons.org/facebook/1877F2" width="48" height="48" />
+  </a>
+</p>
