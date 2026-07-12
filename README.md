@@ -7,22 +7,12 @@
 ---
 
 <p align="center">
-<b>Competitive Programmer | CSE Undergraduate | Problem Solving & Data Structures & Algorithms</b>
+  <b>Competitive Programmer | CSE Undergraduate | Problem Solving & Data Structures and Algorithms</b>
 </p>
 
 ---
 
-## 👨‍💻 About Me
-
-- 🎓 CSE Undergraduate
-- 💻 Passionate about Competitive Programming
-- 🌱 Currently learning C++, Data Structures & Algorithms
-- 🚀 Interested in Software Development & Problem Solving
-- 🎯 Goal: Improve problem-solving skills and become a better Software Engineer
-
----
-
-## 💻 Languages & Technologies
+<h3 align="left"><b>Languages & Technologies</b></h3>
 
 <p>
   <img src="https://skillicons.dev/icons?i=c,cpp,python,html,css" />
@@ -30,7 +20,7 @@
 
 ---
 
-## 🏆 Competitive Programming
+<h3 align="left"><b>Competitive Programming</b></h3>
 
 <p>
   <a href="https://codeforces.com/profile/shakibuzzaman52">
@@ -48,7 +38,7 @@
 
 ---
 
-## 📚 Currently Learning
+<h3 align="left"><b>Currently Learning</b></h3>
 
 - C++
 - Data Structures
@@ -57,7 +47,7 @@
 
 ---
 
-## 🛠 Developer Tools
+<h3 align="left"><b>Developer Tools</b></h3>
 
 <p>
   <img src="https://skillicons.dev/icons?i=vscode,visualstudio,git,github" />
@@ -65,17 +55,12 @@
 
 ---
 
-## 📊 GitHub Stats
+<h3 align="left"><b>GitHub Stats</b></h3>
 
 <p align="center">
   <img height="170" src="https://github-readme-stats.vercel.app/api?username=shakibuzzaman52&show_icons=true&theme=tokyonight" />
-
   <img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=shakibuzzaman52&theme=tokyonight" />
 </p>
-
----
-
-## 📈 Most Used Languages
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=shakibuzzaman52&layout=compact&theme=tokyonight" />
@@ -83,15 +68,7 @@
 
 ---
 
-## 👀 Profile Views
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=shakibuzzaman52&label=Profile%20Views&color=0e75b6&style=flat" />
-</p>
-
----
-
-## 🤝 Let's Connect
+<h3 align="left"><b>Let's Connect</b></h3>
 
 <p>
   <a href="mailto:shakibuzzaman52@gmail.com">
