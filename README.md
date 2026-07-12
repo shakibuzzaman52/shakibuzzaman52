@@ -1,4 +1,4 @@
-# Hi, I'm Shakib Uz Zaman 👋
+## Hi, I'm Shakib Uz Zaman 👋
 
 <p align="center">
   <img src="file_0000000068e871fba615d4d20b7a53fa.png" width="100%" alt="Profile Banner" />
@@ -6,9 +6,7 @@
 
 ---
 
-<p align="center">
-  <b>Competitive Programmer | CSE Undergraduate | Problem Solving & Data Structures and Algorithms</b>
-</p>
+<b>Competitive Programmer | CSE Undergraduate | Learning C++ & Data Structures and Algorithms</b>
 
 ---
 
@@ -40,10 +38,9 @@
 
 <h3 align="left"><b>Currently Learning</b></h3>
 
-- C++
-- Data Structures
-- Algorithms
-- Python
+<p>
+  <img src="https://skillicons.dev/icons?i=c,cpp,python" />
+</p>
 
 ---
 
@@ -51,19 +48,6 @@
 
 <p>
   <img src="https://skillicons.dev/icons?i=vscode,visualstudio,git,github" />
-</p>
-
----
-
-<h3 align="left"><b>GitHub Stats</b></h3>
-
-<p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=shakibuzzaman52&show_icons=true&theme=tokyonight" />
-  <img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=shakibuzzaman52&theme=tokyonight" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=shakibuzzaman52&layout=compact&theme=tokyonight" />
 </p>
 
 ---
