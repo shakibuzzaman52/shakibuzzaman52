@@ -38,17 +38,10 @@
 
 <h3 align="left"> <b>Currently Learning</b></h3>
 
-<p>
-  <img src="https://skillicons.dev/icons?i=c,cpp,python" />
-</p>
-
----
-
-<h3 align="left"> <b>Developer Tools</b></h3>
-
-<p>
-  <img src="https://skillicons.dev/icons?i=vscode,visualstudio,git,github" />
-</p>
+- C++ 
+- Data Structures 
+- Algorithms 
+- Python
 
 ---
 <h3 align="left"> <b>Let's Connect</b></h3>
