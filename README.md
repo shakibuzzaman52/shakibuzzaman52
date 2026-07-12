@@ -36,6 +36,14 @@
 
 ---
 
+<h3 align="left"><b>Developer Tools</b></h3>
+
+<p>
+  <img src="https://skillicons.dev/icons?i=vscode,git,github" />
+</p>
+
+---
+
 <h3 align="left"> <b>Currently Learning</b></h3>
 
 - C++ 
