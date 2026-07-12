@@ -1,4 +1,3 @@
-```markdown
 # Hi, I'm Shakib Uz Zaman 👋
 
 <p align="center">
@@ -115,4 +114,3 @@
     <img src="https://cdn.simpleicons.org/facebook/1877F2" width="48" height="48" />
   </a>
 </p>
-```
