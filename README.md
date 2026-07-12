@@ -6,7 +6,7 @@
 
 ---
 
-<b>Competitive Programmer | CSE Undergraduate | Problem Solving & Data Structures and Algorithms</b>
+<b>Competitive Programmer | CSE Undergraduate | Problem Solver | Data Structures & Algorithms</b>
 
 ---
 
