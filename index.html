@@ -19,302 +19,660 @@
         rel="stylesheet">
     <title>Shakib's Portfolio</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-
-            font-family: "Inter", Arial, Helvetica, sans-serif;
-            font-optical-sizing: auto;
-            font-style: normal;
-            background-color: #0b0b0b;
-            color: #ffffff;
-            font-size: 1rem;
-            line-height: 1.8;
-            background-image: radial-gradient(#1f1f1f 1px, transparent 1px);
-            background-size: 22px 22px;
-        }
-
         /* =======================
-NAVBAR
-======================= */
-        header {
-            width: 100%;
-        }
-
-        nav {
-            width: 100%;
-            padding: 0 4%;
-            height: 90px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        /* =======================
-PROFILE NAV
+RESET
 ======================= */
 
-        .left {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
+/* =======================
+RESET
+======================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 
-        .left img {
-            width: 46px;
-            height: 46px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        .profileLink {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-            color: inherit;
-        }
 
-        .profileText {
-            display: flex;
-            align-items: flex-end;
-            height: 46px;
-        }
+body {
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: #0b0b0b;
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.8;
 
-        .profileText span {
-            font-family: "DM Mono", monospace;
-            font-size: 0.78rem;
-            font-weight: 400;
-            color: #bcbcbc;
-            letter-spacing: 0.3px;
-        }
+    background-image: radial-gradient(#1f1f1f 1px, transparent 1px);
+    background-size: 22px 22px;
+}
 
-        .right ul {
-            display: flex;
-            gap: 25px;
-            list-style: none;
-        }
 
-        .right ul li a {
-            text-decoration: none;
-            color: #bcbcbc;
-            font-size: 1rem;
-        }
 
-        .right ul li a:hover {
-            color: #ffffff;
-        }
+/* =======================
+HEADER / NAVBAR
+======================= */
 
-        /* =======================
+header {
+    width: 100%;
+}
+
+
+nav {
+    width: 100%;
+    padding: 0 4%;
+    height: 90px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+/* =======================
+PROFILE
+======================= */
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+
+.profileLink {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.left img {
+    width: 46px;
+    height: 46px;
+
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+.profileText {
+    display: flex;
+    align-items: center;
+    height: 46px;
+}
+
+
+.profileText span {
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.78rem;
+    font-weight: 400;
+
+    color: #bcbcbc;
+
+    letter-spacing: 0.3px;
+}
+
+
+
+/* =======================
+NAV LINKS
+======================= */
+
+.right ul {
+
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+
+    list-style: none;
+}
+
+
+.right ul li a {
+
+    text-decoration: none;
+
+    color: #999;
+
+    font-size: 0.95rem;
+
+    transition: 0.3s ease;
+}
+
+
+.right ul li a:hover {
+
+    color: #ffffff;
+}
+
+
+.right ul li a i {
+
+    display: none;
+}
+
+
+
+/* =======================
 MAIN
 ======================= */
-        main {
-            width: min(900px, 92%);
-            margin: auto;
-        }
 
-        section {
-            margin: 50px 0;
-        }
 
-        /* =======================
+main {
+
+    width: min(850px, 92%);
+
+    margin: auto;
+}
+
+
+section {
+
+    margin: 50px 0;
+}
+
+
+
+/* =======================
 HERO
 ======================= */
-        .mainHeader h1 {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
 
-        .bio {
-            max-width: 700px;
-        }
 
-        .bio p {
-            font-size: 1rem;
-            color: #cdcdcd;
-        }
+.mainHeader h1 {
 
-        /* =======================
+    font-size: 2.2rem;
+
+    font-weight: 750;
+
+    letter-spacing: -0.5px;
+
+    margin-bottom: 15px;
+}
+
+
+
+.bio {
+
+    max-width: 700px;
+
+}
+
+
+.bio p {
+
+    font-size: 1rem;
+
+    color: #cdcdcd;
+
+}
+
+
+
+/* =======================
 SKILLS
 ======================= */
-        .secondSection {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
 
-        .secondSection>div {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 4px;
-        }
 
-        .secondSection h3 {
-            font-size: 1rem;
-            font-weight: 400;
-            margin-right: 4px;
-            white-space: nowrap;
-            color: #cdcdcd;
-        }
+.secondSection {
 
-        .secondSection span {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            height: 29px;
-            min-width: 65px;
-            padding: 0 9px;
-            border-radius: 4px;
-            background: #151515;
-            color: #8f8f8f;
-            font-family: "Roboto Condensed", sans-serif;
-            font-size: 0.9rem;
-            font-weight: 400;
-        }
+    display: flex;
 
-        .secondSection span:hover {
-            color: #ffffff;
-            background: rgba(255, 255, 255, 0.08);
-            border-bottom-color: rgba(255, 255, 255, 0.8);
-        }
+    flex-direction: column;
 
-        .secondSection span i {
-            margin-right: 5px;
-            font-size: 0.8rem;
-            opacity: 1;
-        }
+    gap: 6px;
+}
 
-        /* =======================
+
+
+.secondSection > div {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 4px;
+
+}
+
+
+
+.secondSection h3 {
+
+    font-size: 1rem;
+
+    font-weight: 400;
+
+    margin-right: 4px;
+
+    white-space: nowrap;
+
+    color: #cdcdcd;
+
+}
+
+
+
+.secondSection span {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+
+    height: 29px;
+
+    min-width: 65px;
+
+
+    padding: 0 9px;
+
+
+    border-radius: 4px;
+
+
+    background: #151515;
+
+
+    color: #8f8f8f;
+
+
+    border: 1px solid transparent;
+
+
+    font-family: "Roboto Condensed", sans-serif;
+
+
+    font-size: 0.9rem;
+
+
+    font-weight: 400;
+
+
+    transition: 0.3s ease;
+
+}
+
+
+
+.secondSection span:hover {
+
+    color: #ffffff;
+
+    background: rgba(255,255,255,0.08);
+
+    border-color: rgba(255,255,255,0.15);
+
+}
+
+
+
+.secondSection span i {
+
+    margin-right: 5px;
+
+    font-size: 0.8rem;
+
+}
+
+
+
+/* =======================
 ABOUT
 ======================= */
-        .threeSection {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
 
-        .threeSection p {
-            color: #cdcdcd;
-            font-size: 1rem;
-            font-weight: 400;
-            max-width: 760px;
-        }
 
-        /* =======================
+.threeSection {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+}
+
+
+
+.threeSection p {
+
+    color: #cdcdcd;
+
+    font-size: 1rem;
+
+    font-weight: 400;
+
+    max-width: 760px;
+
+}
+
+ /* =======================
 CONTACT
 ======================= */
-        .findMeTitle h3 {
-            font-size: 1rem;
-            font-weight: 400;
-            margin-bottom: 12px;
-            color: #cdcdcd;
-        }
 
-        .findMePlatform {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
+.findMeSection {
+    width: 100%;
+}
 
-        .findMePlatform a {
-            text-decoration: none;
-            color: #ffffff;
-            font-size: 1rem;
-            font-weight: 550;
-            display: inline-block;
-            padding-bottom: 0px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.105);
-            transition: border-color 0.3s ease, color 0.3s ease;
-        }
 
-        .findMePlatform a:hover {
-            color: #ffffff;
-            border-bottom-color: rgba(255, 255, 255, 0.8);
-        }
+.findMeTitle h3 {
 
-        .mail {
-            margin-top: 15px;
-        }
+    font-size: 1rem;
 
-        .mail p {
-            color: #cdcdcd;
-            font-size: 1rem;
-            font-weight: 400;
-        }
+    font-weight: 400;
 
-        .mail a {
-            color: #cdcdcd;
-            text-decoration: none;
-            font-family: "DM Mono", monospace;
-            font-size: 0.95rem;
-        }
+    margin-bottom: 12px;
 
-        /* =======================
+    color: #cdcdcd;
+
+}
+
+
+
+.findMePlatform {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+}
+
+
+
+.findMePlatform a {
+
+    text-decoration: none;
+
+    color: #ffffff;
+
+    font-size: 1rem;
+
+    font-weight: 550;
+
+    display: inline-block;
+
+    border-bottom: 1px solid rgba(255,255,255,0.105);
+
+    transition: 0.3s ease;
+
+}
+
+
+
+.findMePlatform a:hover {
+
+    color: #ffffff;
+
+    border-bottom-color: rgba(255,255,255,0.8);
+
+}
+
+
+
+.mail {
+
+    margin-top: 15px;
+
+}
+
+
+
+.mail p {
+
+    color: #cdcdcd;
+
+    font-size: 1rem;
+
+}
+
+
+
+.mail a {
+
+    color: #cdcdcd;
+
+    text-decoration: none;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.95rem;
+
+}
+
+
+
+.mail a:hover {
+
+    color: #ffffff;
+
+}
+
+
+
+
+/* =======================
 FOOTER
 ======================= */
-        .footerSection {
-            width: min(900px, 92%);
-            margin: auto;
-            padding: 25px 0;
-            border-top: 1px solid #262626;
-        }
 
-        .footer {
-            text-align: left;
-        }
 
-        .footer p {
-            color: #cdcdcd;
-            font-size: 1rem;
-        }
+.footerSection {
 
-        /* =======================
+    width: min(850px,92%);
+
+    margin: auto;
+
+    padding: 25px 0;
+
+    border-top: 1px solid #262626;
+
+}
+
+
+
+.footer {
+
+    text-align: left;
+
+}
+
+
+
+.footer p {
+
+    color: #777;
+
+    font-size: 0.9rem;
+
+}
+
+
+
+
+
+/* =======================
 RESPONSIVE
 ======================= */
-        @media (max-width:768px) {
-            nav {
-                flex-direction: column;
-                justify-content: center;
-                gap: 18px;
-                height: auto;
-                padding: 25px 0;
-            }
 
-            .right ul {
-                gap: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
 
-            .mainHeader h1 {
-                font-size: 1.6rem;
-            }
+@media (max-width:768px) {
 
-            .bio p {
-                font-size: 1rem;
-            }
 
-            .secondSection>div {
-                align-items: flex-start;
-            }
+    /* HEADER */
 
-            .findMePlatform {
-                flex-direction: column;
-                gap: 10px;
-            }
+    nav {
 
-        }
+        height: 80px;
+
+        padding: 0 4%;
+
+        flex-direction: row;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+    }
+
+
+
+    .profileText {
+
+        display: none;
+
+    }
+
+
+
+    .left img {
+
+        width: 42px;
+
+        height: 42px;
+
+    }
+
+
+
+    .right ul {
+
+        gap: 18px;
+
+    }
+
+
+
+    .right ul li a span {
+
+        display: none;
+
+    }
+
+
+
+    .right ul li a i {
+
+        display: block;
+
+        font-size: 1.1rem;
+
+        color: #999;
+
+        transition: 0.3s ease;
+
+    }
+
+
+
+    .right ul li a:hover i {
+
+        color: #ffffff;
+
+    }
+
+
+
+    /* MAIN */
+
+    .mainHeader h1 {
+
+        font-size: 1.6rem;
+
+    }
+
+
+
+    .bio p {
+
+        font-size: 1rem;
+
+    }
+
+
+
+    .secondSection > div {
+
+        align-items: flex-start;
+
+    }
+
+
+
+    /* CONTACT */
+
+    .findMePlatform {
+
+        display: flex;
+
+        flex-direction: row;
+
+        flex-wrap: wrap;
+
+        gap: 10px;
+
+    }
+
+
+
+    .findMePlatform a {
+
+        font-size: 0.95rem;
+
+    }
+
+
+
+    .mail {
+
+        margin-top: 15px;
+
+    }
+
+
+
+    .mail p {
+
+        font-size: 0.95rem;
+
+    }
+
+
+
+    .mail a {
+
+        font-size: 0.9rem;
+
+        word-break: break-word;
+
+    }
+
+
+
+    /* FOOTER */
+
+    .footer p {
+
+        font-size: 0.85rem;
+
+    }
+
+}
     </style>
 </head>
 
@@ -341,23 +699,26 @@ RESPONSIVE
 
                 <ul>
 
-                    <li>
-                        <a href="#">
-                            Blog
-                        </a>
-                    </li>
+                   <li>
+    <a href="#" title="Blog">
+        <i class="fa-regular fa-newspaper"></i>
+        <span>Blog</span>
+    </a>
+</li>
 
-                    <li>
-                        <a href="#">
-                            Projects
-                        </a>
-                    </li>
+<li>
+    <a href="#" title="Projects">
+        <i class="fa-regular fa-folder"></i>
+        <span>Projects</span>
+    </a>
+</li>
 
-                    <li>
-                        <a href="#">
-                            Resources
-                        </a>
-                    </li>
+<li>
+    <a href="#" title="Resources">
+        <i class="fa-regular fa-file-pdf"></i>
+        <span>Resources</span>
+    </a>
+</li>
 
                 </ul>
 
