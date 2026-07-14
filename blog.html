@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,6 +22,7 @@
 
         html {
             scroll-behavior: smooth;
+            scrollbar-width: none; /* Hide scrollbar Firefox */
         }
 
         body {
@@ -36,6 +36,12 @@
             color: #ffffff;
             font-size: 1rem;
             line-height: 1.8;
+            -ms-overflow-style: none; /* Hide scrollbar IE/Edge */
+        }
+
+        /* Hide scrollbar Chrome, Edge, Safari */
+        ::-webkit-scrollbar {
+            display: none;
         }
 
         /* =======================
@@ -209,23 +215,6 @@
             pointer-events: auto;
         }
 
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #050505;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #111111;
-            border-radius: 10px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #222222;
-        }
-
         /* =======================
            RESPONSIVE DESIGN
         ======================= */
@@ -278,7 +267,6 @@
         }
     </style>
 </head>
-
 <body>
 
     <div id="top"></div>
@@ -369,5 +357,4 @@
         };
     </script>
 </body>
-
 </html>
