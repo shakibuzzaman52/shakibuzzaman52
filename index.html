@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shakib's Portfolio</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@v13/font/simple-icons.min.css">
@@ -13,8 +13,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <title>Shakib's Portfolio</title>
-    
     <style>
         /* =======================
            RESET & BASE STYLES
@@ -47,7 +45,6 @@
             font-size: 1rem;
         }
 
-        /* Consolidated duplicate link styles (.highlight-link & .findMePlatform a) */
         .highlight-link,
         .findMePlatform a {
             color: #ffffff;
@@ -289,56 +286,37 @@
         }
 
         /* =======================
-   BACK TO TOP BUTTON
-======================= */
+           BACK TO TOP
+        ======================= */
+        .backToTop {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #888;
+            background: transparent;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 0.9rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.3s ease;
+            z-index: 9999;
+        }
 
-.backToTop {
-    position: fixed;
-    right: 30px;
-    bottom: 30px;
+        .backToTop:hover {
+            color: #fff;
+            background: #161616e1;
+        }
 
-    width: 42px;
-    height: 42px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: #161616;
-    color: #999;
-
-    border: 1px solid #262626;
-    border-radius: 50%;
-
-    font-size: 1rem;
-    text-decoration: none;
-
-    opacity: 0;
-    visibility: hidden;
-
-    transition: 0.3s ease;
-}
-
-.backToTop:hover {
-    color: #ffffff;
-    background: rgba(255,255,255,0.08);
-}
-
-.backToTop.show {
-    opacity: 1;
-    visibility: visible;
-}
-
-
-@media (max-width: 768px) {
-    .backToTop {
-        right: 20px;
-        bottom: 20px;
-
-        width: 38px;
-        height: 38px;
-    }
-}
+        .backToTop.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
 
         /* =======================
            RESPONSIVE
@@ -399,20 +377,10 @@
             }
         }
     </style>
-    <script>
-    const backToTop = document.getElementById("backToTop");
-
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 300) {
-            backToTop.classList.add("show");
-        } else {
-            backToTop.classList.remove("show");
-        }
-    });
-</script>
 </head>
-
 <body>
+
+    <div id="top"></div>
 
     <header>
         <nav>
@@ -424,7 +392,6 @@
                     </div>
                 </a>
             </div>
-
             <div class="right">
                 <ul>
                     <li>
@@ -504,7 +471,8 @@
             <div class="futureDescription">
                 <p class="text-muted">
                     Currently, I'm focused on C++, Data Structures and Algorithms, and competitive programming to build a solid foundation in computer science.
-                </p><br>
+                </p>
+                <br>
                 <p class="text-muted">
                     Outside of programming, I enjoy watching movies. You can explore my <a href="javascript:void(0)" class="highlight-link">Movie Collection</a> to see the films I have watched.
                 </p>
@@ -534,8 +502,28 @@
             <p>Thanks for visiting! Let's keep learning, creating and improving together.</p>
         </div>
     </footer>
-<a href="#" class="backToTop" id="backToTop" title="Back to top">
-    <i class="fa-solid fa-arrow-up"></i>
-</a>
+
+    <a href="#" class="backToTop" id="backToTop">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const btn = document.getElementById("backToTop");
+            if (window.pageYOffset > 50) {
+                btn.classList.add("active");
+            } else {
+                btn.classList.remove("active");
+            }
+        });
+
+        document.getElementById("backToTop").onclick = function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        };
+    </script>
 </body>
 </html>
