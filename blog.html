@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -208,6 +209,23 @@
             pointer-events: auto;
         }
 
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #050505;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #111111;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #222222;
+        }
+
         /* =======================
            RESPONSIVE DESIGN
         ======================= */
@@ -260,6 +278,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <div id="top"></div>
@@ -341,7 +360,7 @@
             }
         });
 
-        document.getElementById("backToTop").onclick = function(e) {
+        document.getElementById("backToTop").onclick = function (e) {
             e.preventDefault();
             window.scrollTo({
                 top: 0,
@@ -350,4 +369,5 @@
         };
     </script>
 </body>
+
 </html>
