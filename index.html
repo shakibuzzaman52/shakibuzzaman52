@@ -5,29 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-    <!-- Simple Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@v13/font/simple-icons.min.css">
-
-    <!-- Devicon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
-    <!-- Google Fonts: Inter + Roboto Condensed -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <title>Shakib's Portfolio</title>
+    
     <style>
         /* =======================
-   RESET
-======================= */
-
+           RESET & BASE STYLES
+        ======================= */
         * {
             margin: 0;
             padding: 0;
@@ -40,23 +31,41 @@
 
         body {
             font-family: "Inter", Arial, Helvetica, sans-serif;
-            font-optical-sizing: auto;
-            font-style: normal;
-
             background-color: #050505;
             background-image: radial-gradient(#1f1f1f 1px, transparent 1px);
             background-size: 22px 22px;
-
             color: #ffffff;
             font-size: 1rem;
             line-height: 1.8;
         }
 
+        /* =======================
+           TYPOGRAPHY & SHARED
+        ======================= */
+        .text-muted {
+            color: #cdcdcd;
+            font-size: 1rem;
+        }
+
+        /* Consolidated duplicate link styles (.highlight-link & .findMePlatform a) */
+        .highlight-link,
+        .findMePlatform a {
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 550;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.144);
+            transition: 0.3s ease;
+        }
+
+        .highlight-link:hover,
+        .findMePlatform a:hover {
+            border-bottom-color: rgba(255, 255, 255, 0.8);
+        }
 
         /* =======================
-   HEADER / NAVBAR
-======================= */
-
+           HEADER & NAV
+        ======================= */
         header {
             width: 100%;
         }
@@ -65,16 +74,10 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-
             width: 100%;
             height: 90px;
             padding: 0 3%;
         }
-
-
-        /* =======================
-   PROFILE
-======================= */
 
         .left {
             display: flex;
@@ -85,7 +88,6 @@
             display: flex;
             align-items: center;
             gap: 12px;
-
             color: inherit;
             text-decoration: none;
         }
@@ -93,7 +95,6 @@
         .left img {
             width: 46px;
             height: 46px;
-
             object-fit: cover;
             border-radius: 50%;
         }
@@ -101,7 +102,6 @@
         .profileText {
             display: flex;
             align-items: flex-end;
-
             height: 46px;
             padding-bottom: 2px;
         }
@@ -110,30 +110,21 @@
             font-family: "DM Mono", monospace;
             font-size: 0.78rem;
             font-weight: 400;
-
             letter-spacing: 0.3px;
             color: #bcbcbc;
         }
-
-
-        /* =======================
-   NAV LINKS
-======================= */
 
         .right ul {
             display: flex;
             align-items: center;
             gap: 25px;
-
             list-style: none;
         }
 
         .right ul li a {
             color: #999;
             text-decoration: none;
-
             font-size: 0.95rem;
-
             transition: color 0.3s ease;
         }
 
@@ -145,11 +136,9 @@
             display: none;
         }
 
-
         /* =======================
-   MAIN
-======================= */
-
+           MAIN LAYOUT
+        ======================= */
         main {
             width: min(700px, 80%);
             margin: auto;
@@ -159,14 +148,11 @@
             margin: 50px 0;
         }
 
-
         /* =======================
-   HERO SECTION
-======================= */
-
+           HERO SECTION
+        ======================= */
         .mainHeader h1 {
             margin-bottom: 15px;
-
             font-size: 2.2rem;
             font-weight: 750;
             letter-spacing: -0.5px;
@@ -176,37 +162,28 @@
             max-width: 700px;
         }
 
-        .bio p {
-            color: #cdcdcd;
-            font-size: 1rem;
-        }
-
-
         /* =======================
-   SKILLS SECTION
-======================= */
-
+           SKILLS SECTION
+        ======================= */
         .secondSection {
             display: flex;
             flex-direction: column;
             gap: 4px;
         }
 
-        .secondSection>div {
+        .secondSection > div {
             display: flex;
             align-items: center;
             flex-wrap: wrap;
             gap: 4px;
         }
 
-        .secondSection h3 {
+        .secondSection h3,
+        .findMeTitle h3 {
             margin-right: 3px;
-
             color: #cdcdcd;
-
             font-size: 1rem;
             font-weight: 400;
-
             white-space: nowrap;
         }
 
@@ -214,26 +191,30 @@
             display: inline-flex;
             justify-content: center;
             align-items: center;
-
             min-width: 65px;
             height: 28px;
             padding: 0 10px;
-
             background: #161616;
-            border: 1px solid transparent;
             border-radius: 4px;
+            transition: 0.3s ease;
+        }
 
+        .secondSection span a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             color: #8f8f8f;
-
+            text-decoration: none;
             font-family: "Roboto Condensed", sans-serif;
             font-size: 0.93rem;
             font-weight: 400;
-
-            transition: 0.3s ease;
         }
 
         .secondSection span:hover {
             background: rgba(255, 255, 255, 0.08);
+        }
+
+        .secondSection span:hover a {
             color: #ffffff;
         }
 
@@ -243,9 +224,8 @@
         }
 
         /* =======================
-   ABOUT SECTION
-======================= */
-
+           ABOUT SECTION
+        ======================= */
         .threeSection {
             display: flex;
             flex-direction: column;
@@ -254,29 +234,17 @@
 
         .threeSection p {
             max-width: 760px;
-
-            color: #cdcdcd;
-
-            font-size: 1rem;
-            font-weight: 400;
         }
 
-
         /* =======================
-   CONTACT SECTION
-======================= */
-
+           CONTACT SECTION
+        ======================= */
         .findMeSection {
             width: 100%;
         }
 
         .findMeTitle h3 {
             margin-bottom: 12px;
-
-            color: #cdcdcd;
-
-            font-size: 1rem;
-            font-weight: 400;
         }
 
         .findMePlatform {
@@ -287,60 +255,32 @@
 
         .findMePlatform a {
             display: inline-block;
-
-            color: #ffffff;
-            text-decoration: none;
-
-            font-size: 1rem;
-            font-weight: 550;
-
-            border-bottom: 1px solid rgba(255, 255, 255, 0.105);
-
-            transition: 0.3s ease;
-        }
-
-        .findMePlatform a:hover {
-            color: #ffffff;
-            border-bottom-color: rgba(255, 255, 255, 0.8);
         }
 
         .mail {
             margin-top: 15px;
         }
 
-        .mail p {
-            color: #cdcdcd;
-            font-size: 1rem;
-        }
-
         .mail a {
             color: #cdcdcd;
             text-decoration: none;
-
             font-family: "DM Mono", monospace;
             font-size: 0.95rem;
+            transition: color 0.3s ease;
         }
 
         .mail a:hover {
             color: #ffffff;
         }
 
-
         /* =======================
-   FOOTER
-======================= */
-
+           FOOTER
+        ======================= */
         .footerSection {
             width: min(700px, 80%);
-
             margin: auto;
             padding: 25px 0;
-
             border-top: 1px solid #262626;
-        }
-
-        .footer {
-            text-align: left;
         }
 
         .footer p {
@@ -348,21 +288,17 @@
             font-size: 0.9rem;
         }
 
-
         /* =======================
-   RESPONSIVE
-======================= */
-
+           RESPONSIVE
+        ======================= */
         @media (max-width: 768px) {
-
-            /* HEADER */
-
             nav {
                 height: 80px;
                 padding: 0 6%;
             }
 
-            .profileText {
+            .profileText,
+            .right ul li a span {
                 display: none;
             }
 
@@ -375,16 +311,10 @@
                 gap: 18px;
             }
 
-            .right ul li a span {
-                display: none;
-            }
-
             .right ul li a i {
                 display: block;
-
                 color: #999;
                 font-size: 1.1rem;
-
                 transition: color 0.3s ease;
             }
 
@@ -392,9 +322,8 @@
                 color: #ffffff;
             }
 
-            /* MAIN */
-
-            main {
+            main,
+            .footerSection {
                 width: 88%;
             }
 
@@ -402,21 +331,13 @@
                 font-size: 1.6rem;
             }
 
-            .bio p {
-                font-size: 1rem;
-            }
-
-            .secondSection>div {
+            .secondSection > div {
                 align-items: flex-start;
             }
 
-            /* CONTACT */
-
-            .findMePlatform a {
-                font-size: 0.95rem;
-            }
-
-            .mail p {
+            .findMePlatform a,
+            .mail p,
+            .footer p {
                 font-size: 0.95rem;
             }
 
@@ -424,259 +345,132 @@
                 font-size: 0.9rem;
                 word-break: break-word;
             }
-
-            /* FOOTER */
-
-            .footerSection {
-                width: 88%;
-            }
-
-            .footer p {
-                font-size: 0.95rem;
-            }
         }
     </style>
 </head>
 
 <body>
+
     <header>
-
         <nav>
-
             <div class="left">
-
                 <a href="index.html" class="profileLink">
-
                     <img src="https://github.com/shakibuzzaman52.png" alt="Profile">
-
                     <div class="profileText">
                         <span>shakibuzzaman52.me</span>
                     </div>
-
                 </a>
-
             </div>
 
             <div class="right">
-
                 <ul>
-
                     <li>
-                        <a href="#" title="Blog">
+                        <a href="javascript:void(0)" title="Blog">
                             <i class="fa-regular fa-newspaper"></i>
                             <span>Blog</span>
                         </a>
                     </li>
-
                     <li>
-                        <a href="#" title="Projects">
+                        <a href="javascript:void(0)" title="Projects">
                             <i class="fa-regular fa-folder"></i>
                             <span>Projects</span>
                         </a>
                     </li>
-
                     <li>
-                        <a href="#" title="Resources">
+                        <a href="javascript:void(0)" title="Resources">
                             <i class="fa-regular fa-file-pdf"></i>
                             <span>Resources</span>
                         </a>
                     </li>
-
                 </ul>
-
             </div>
-
         </nav>
-
     </header>
 
-
     <main>
-
-
-        <!-- Hero -->
         <section class="firstSection">
             <div class="mainHeader">
-                <h1>
-                    G M Shakib Uz Zaman
-                </h1>
+                <h1>G M Shakib Uz Zaman</h1>
             </div>
             <div class="bio">
-                <p>
-                    Hey! I'm Shakib Uz Zaman, a CSE undergraduate,
-                    competitive programmer and problem solver.
+                <p class="text-muted">
+                    Hey! I'm Shakib Uz Zaman, a <a href="javascript:void(0)" class="highlight-link">CSE undergraduate</a>, competitive programmer and problem solver.
                 </p>
             </div>
         </section>
 
-        <!-- Skills -->
         <section class="secondSection">
             <div class="langAndTech">
-                <h3>
-                    Languages & Technologies
-                </h3>
-                <span>
-                    <i class="devicon-c-plain colored"></i>
-                    C
-                </span>
-                <span>
-                    <i class="devicon-cplusplus-plain colored"></i>
-                    C++
-                </span>
-                <span>
-                    <i class="devicon-python-plain colored"></i>
-                    Python
-                </span>
-                <span>
-                    <i class="devicon-html5-plain colored"></i>
-                    HTML
-                </span>
-                <span>
-                    <i class="devicon-css3-plain colored"></i>
-                    CSS
-                </span>
+                <h3>Languages & Technologies</h3>
+                <span><a href="javascript:void(0)"><i class="devicon-c-plain colored"></i> C</a></span>
+                <span><a href="javascript:void(0)"><i class="devicon-cplusplus-plain colored"></i> C++</a></span>
+                <span><a href="javascript:void(0)"><i class="devicon-python-plain colored"></i> Python</a></span>
+                <span><a href="javascript:void(0)"><i class="devicon-html5-plain colored"></i> HTML</a></span>
+                <span><a href="javascript:void(0)"><i class="devicon-css3-plain colored"></i> CSS</a></span>
             </div>
 
             <div class="competitiveProg">
-                <h3>
-                    Competitive Programming
-                </h3>
-                <span>
-                    <i class="si si-codeforces" style="color:#871701;"></i>
-                    Codeforces
-                </span>
-
-                <span>
-                    <i class="si si-leetcode" style="color:#947613;"></i>
-                    LeetCode
-                </span>
-
-                <span>
-                    <i class="si si-codechef" style="color:#d8dada;"></i>
-                    CodeChef
-                </span>
+                <h3>Competitive Programming</h3>
+                <span><a href="https://codeforces.com/profile/shakibuzzaman52" target="_blank" rel="noopener noreferrer"><i class="si si-codeforces" style="color:#ca2606;"></i> Codeforces</a></span>
+                <span><a href="https://leetcode.com/u/shakibuzzaman52/" target="_blank" rel="noopener noreferrer"><i class="si si-leetcode" style="color:#ca9e0b;"></i> LeetCode</a></span>
+                <span><a href="https://www.codechef.com/users/shakibuzzaman" target="_blank" rel="noopener noreferrer"><i class="si si-codechef" style="color:#ffffff;"></i> CodeChef</a></span>
             </div>
 
             <div class="devTools">
-                <h3>
-                    Developer Tools
-                </h3>
-                <span>
-                    <i class="devicon-vscode-plain colored"></i>
-                    VS Code
-                </span>
-
-                <span>
-                    <i class="devicon-git-plain colored"></i>
-                    Git
-                </span>
-
-                <span>
-                    <i class="devicon-github-original"></i>
-                    GitHub
-                </span>
+                <h3>Developer Tools</h3>
+                <span><a href="javascript:void(0)"><i class="devicon-vscode-plain colored"></i> VS Code</a></span>
+                <span><a href="javascript:void(0)"><i class="devicon-git-plain colored"></i> Git</a></span>
+                <span><a href="https://github.com/shakibuzzaman52" target="_blank" rel="noopener noreferrer"><i class="devicon-github-original"></i> GitHub</a></span>
             </div>
 
             <div class="currentlyLearning">
-                <h3>
-                    Currently Learning
-                </h3>
-                <span>
-                    <i class="devicon-cplusplus-plain colored"></i>
-                    C++
-                </span>
-
-                <span>
-                    <i class="fa-solid fa-diagram-project" style="color:#00d486;"></i>
-                    Data Structures
-                </span>
-
-                <span>
-                    <i class="fa-solid fa-brain" style="color:#fafafa;"></i>
-                    Algorithms
-                </span>
-
-                <span>
-                    <i class="devicon-python-plain colored"></i>
-                    Python
-                </span>
+                <h3>Currently Learning</h3>
+                <span><a href="javascript:void(0)"><i class="devicon-cplusplus-plain colored"></i> C++</a></span>
+                <span><a href="javascript:void(0)"><i class="fa-solid fa-diagram-project" style="color:#00d486;"></i> Data Structures</a></span>
+                <span><a href="javascript:void(0)"><i class="fa-solid fa-brain" style="color:#fafafa;"></i> Algorithms</a></span>
+                <span><a href="javascript:void(0)"><i class="devicon-python-plain colored"></i> Python</a></span>
             </div>
         </section>
 
-        <!-- About -->
         <section class="threeSection">
             <div class="currentlyDescription">
-                <p>
-                    I enjoy learning new concepts, solving programming
-                    problems, and improving my skills through consistent
-                    practice. Currently, I'm focused on C++, Data
-                    Structures and Algorithms, and competitive programming
-                    to build a solid foundation in computer science.
+                <p class="text-muted">
+                    I enjoy learning new concepts and turning ideas into projects. I continuously improve my skills through consistent practice. Explore my <a href="javascript:void(0)" class="highlight-link">Projects</a> to see what I've built. Read my <a href="javascript:void(0)" class="highlight-link">Blog</a> to follow my journey. Check out my <a href="javascript:void(0)" class="highlight-link">Resources</a>. View my <a href="javascript:void(0)" class="highlight-link">Achievements</a>. Learn more about me through my <a href="javascript:void(0)" class="highlight-link">Resume</a>.
                 </p>
             </div>
-
             <div class="futureDescription">
-                <p>
-                    I believe that continuous learning and discipline are
-                    the keys to becoming a better developer. As I grow,
-                    I look forward to working on meaningful projects,
-                    exploring new technologies, and connecting with
-                    people who share a passion for technology and
-                    software development.
+                <p class="text-muted">
+                    Currently, I'm focused on C++, Data Structures and Algorithms, and competitive programming to build a solid foundation in computer science.
+                </p>
+                <p class="text-muted">
+                    I enjoy watching movies. You can explore my <a href="javascript:void(0)" class="highlight-link">Movie Collection</a> to see the films I have watched.
                 </p>
             </div>
         </section>
 
-        <!-- Contact -->
         <section class="findMeSection">
             <div class="findMeTitle">
-                <h3>
-                    Find me on
-                </h3>
+                <h3>Find me on</h3>
             </div>
-
             <div class="findMePlatform">
-
-                <a href="https://github.com/shakibuzzaman52" target="_blank">
-                    <i class="fa-brands fa-github"></i>
-                    GitHub
-                </a>
-
-                <a href="#" target="_blank">
-                    <i class="fa-brands fa-linkedin"></i>
-                    LinkedIn
-                </a>
-
-                <a href="#" target="_blank">
-                    <i class="fa-brands fa-instagram"></i>
-                    Instagram
-                </a>
-
-                <a href="#" target="_blank">
-                    <i class="fa-brands fa-facebook"></i>
-                    Facebook
-                </a>
-
+                <a href="https://github.com/shakibuzzaman52" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a href="https://www.linkedin.com/in/shakibuzzaman52" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                <a href="https://www.instagram.com/shakibuzzaman_52" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href="https://www.facebook.com/shakibuzzaman52" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i> Facebook</a>
             </div>
-
             <div class="mail">
-                <p>
-                    Or mail me at
-                    <a href="mailto:shakibuzzaman52@gmail.com">
-                        shakibuzzaman52@gmail.com
-                    </a>
+                <p class="text-muted">
+                    Or mail me at <a href="mailto:shakibuzzaman52@gmail.com">shakibuzzaman52@gmail.com</a>
                 </p>
             </div>
         </section>
     </main>
+
     <footer class="footerSection">
         <div class="footer">
-            <p>
-                Thanks for visiting! Let's keep learning,
-                creating and improving together.
-            </p>
+            <p>Thanks for visiting! Let's keep learning, creating and improving together.</p>
         </div>
     </footer>
-</body>
 
+</body>
 </html>
