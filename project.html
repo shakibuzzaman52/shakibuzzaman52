@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Shakib Uz Zaman</title>
+
+    <!-- Icon & Font Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@v13/font/simple-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    
+    <!-- Google Fonts strictly matching your template -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+        /* =======================
+           RESET & BASE STYLES
+        ======================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scrollbar-width: none; /* Hide scrollbar Firefox */
+        }
+
+        body {
+            font-family: "Inter", Arial, Helvetica, sans-serif;
+            background-color: #050505;
+            background-image: radial-gradient(#1f1f1f 1px, transparent 1px);
+            background-size: 22px 22px;
+            color: #ffffff;
+            font-size: 1rem;
+            line-height: 1.8;
+            -ms-overflow-style: none; /* Hide scrollbar IE/Edge */
+            animation: pageFadeIn 0.4s ease-in-out;
+        }
+
+        /* Hide scrollbar Chrome, Edge, Safari */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* =======================
+           HEADER & NAV
+        ======================= */
+        header {
+            width: 100%;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 90px;
+            padding: 0 3%;
+        }
+
+        .left {
+            display: flex;
+            align-items: center;
+        }
+
+        .profileLink {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .left img {
+            width: 46px;
+            height: 46px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .profileText {
+            display: flex;
+            align-items: flex-end;
+            height: 46px;
+            padding-bottom: 2px;
+        }
+
+        .profileText span {
+            font-family: "DM Mono", monospace;
+            font-size: 0.78rem;
+            font-weight: 400;
+            letter-spacing: 0.3px;
+            color: #bcbcbc;
+        }
+
+        .right ul {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .right ul li a {
+            color: #999;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .right ul li a:hover {
+            color: #ffffff;
+        }
+
+        .right ul li a i {
+            display: none;
+        }
+
+        /* =======================
+           MAIN LAYOUT & TYPOGRAPHY
+        ======================= */
+        main {
+            flex: 1;
+            width: min(700px, 80%);
+            margin: auto;
+        }
+
+        section {
+            margin: 50px 0;
+        }
+
+        .pageSection h1 {
+            margin-bottom: 15px;
+            font-size: 2.2rem;
+            font-weight: 750;
+            letter-spacing: -0.5px;
+        }
+
+        .pageSubtitle {
+            color: #888888; /* Darker/blacker gray subtitle */
+            font-size: 0.92rem;
+            font-family: "DM Mono", monospace;
+            margin-bottom: 30px;
+        }
+
+        /* =======================
+           GITHUB LINK
+        ======================= */
+        .projectGrids {
+            display: flex;
+            margin-bottom: 40px;
+        }
+
+        .githubLink {
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 550;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.144);
+            transition: 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding-bottom: 2px;
+        }
+
+        .githubLink:hover {
+            border-bottom-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .githubLink i {
+            font-size: 1.1rem;
+        }
+
+        /* =======================
+           SECTIONS LAYOUT
+        ======================= */
+        .projectSection {
+            margin-bottom: 45px;
+        }
+
+        .sectionHeading {
+            margin-bottom: 20px;
+            color: #cdcdcd;
+            font-size: 1rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .projectSectionList {
+            display: flex;
+            flex-direction: column;
+            gap: 14px; 
+        }
+
+        /* =======================
+           PROJECT ITEMS STYLING (Minimal Block Style)
+        ======================= */
+        .projectItem {
+            display: flex;
+            align-items: center; 
+            gap: 20px;
+            padding: 15px; 
+            border-radius: 8px; 
+            background-color: transparent; 
+            text-decoration: none;
+            color: inherit;
+            transition: background-color 0.25s ease;
+        }
+
+        .projectItem:hover {
+            background-color: #0c0c0c; 
+        }
+
+        .projectIcon {
+            width: 64px; 
+            height: 64px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px; 
+            overflow: hidden; 
+            background-color: transparent; 
+        }
+
+        .projectIcon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; 
+            border-radius: 6px; 
+        }
+
+        .projectIcon .defaultIcon {
+            font-size: 2.2rem; 
+            color: #333;
+            display: none; 
+        }
+
+        .projectContent {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .projectTitle {
+            font-weight: 550;
+            color: #ffffff; 
+            font-size: 1.15rem; 
+            transition: color 0.25s ease;
+        }
+
+        .projectItem:hover .projectTitle {
+            color: #ffffff;
+        }
+
+        .projectDescription {
+            color: #888888; /* Darker/blacker gray description text */
+            font-size: 0.95rem;
+            line-height: 1.6;
+            transition: color 0.25s ease;
+        }
+
+        .projectItem:hover .projectDescription {
+            color: #bcbcbc; /* Smoothly highlights to muted white on hover */
+        }
+
+        /* =======================
+           FOOTER
+        ======================= */
+        .footerSection {
+            width: min(700px, 80%);
+            margin: auto;
+            padding: 25px 0;
+            border-top: 1px solid #262626;
+        }
+
+        .footer p {
+            color: #cdcdcd;
+            font-size: 0.9rem;
+        }
+
+        /* =======================
+           BACK TO TOP BUTTON
+        ======================= */
+        .backToTop {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #888;
+            background: transparent;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 0.9rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.3s ease;
+            z-index: 9999;
+        }
+
+        .backToTop:hover {
+            color: #fff;
+            background: #161616e1;
+        }
+
+        .backToTop.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* =======================
+           PAGE ANIMATIONS
+        ======================= */
+        @keyframes pageFadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* =======================
+           RESPONSIVE INTERFACES
+        ======================= */
+        @media(max-width: 768px) {
+            nav {
+                height: 80px;
+                padding: 0 6%;
+            }
+
+            .profileText,
+            .right ul li a span {
+                display: none;
+            }
+
+            .left img {
+                width: 42px;
+                height: 42px;
+            }
+
+            .right ul {
+                gap: 18px;
+            }
+
+            .right ul li a i {
+                display: block;
+                color: #999;
+                font-size: 1.1rem;
+                transition: color 0.3s ease;
+            }
+
+            .right ul li a:hover i {
+                color: #ffffff;
+            }
+
+            main,
+            .footerSection {
+                width: 88%;
+            }
+
+            .pageSection h1 {
+                font-size: 1.6rem;
+            }
+
+            .githubLink {
+                font-size: 0.95rem;
+            }
+
+            .projectItem {
+                flex-direction: row; 
+                align-items: center;
+                gap: 16px;
+                padding: 12px 6px;
+            }
+
+            .projectIcon {
+                width: 48px; 
+                height: 48px;
+            }
+
+            .projectIcon .defaultIcon {
+                font-size: 1.6rem;
+            }
+
+            .projectContent {
+                gap: 2px;
+            }
+
+            .projectTitle {
+                font-size: 1.02rem;
+            }
+
+            .projectDescription {
+                font-size: 0.85rem;
+                line-height: 1.5;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Scroll Target Anchor -->
+    <div id="top"></div>
+
+    <!-- Navigation Header -->
+    <header>
+        <nav>
+            <div class="left">
+                <a href="index.html" class="profileLink">
+                    <img src="https://github.com/shakibuzzaman52.png" alt="Profile">
+                    <div class="profileText">
+                        <span>shakibuzzaman52.me</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="right">
+                <ul>
+                    <li>
+                        <a href="blog.html" title="Blog">
+                            <i class="fa-regular fa-newspaper"></i>
+                            <span>Blog</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="projects.html" title="Projects">
+                            <i class="fa-regular fa-folder"></i>
+                            <span>Projects</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="resources.html" title="Resources">
+                            <i class="fa-regular fa-file-pdf"></i>
+                            <span>Resources</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Workspace Content -->
+    <main>
+        <section class="pageSection">
+            <h1>Projects</h1>
+            <p class="pageSubtitle">
+                Projects that I created or maintaining.
+            </p>
+
+            <!-- Minimal GitHub Link -->
+            <div class="projectGrids">
+                <a href="https://github.com/shakibuzzaman52" target="_blank" rel="noopener noreferrer" class="githubLink">
+                    <i class="fa-brands fa-github-alt"></i>
+                    <span>Find my projects on GitHub</span>
+                </a>
+            </div>
+
+            <!-- Section 1: Open Source -->
+            <div class="projectSection">
+                <h2 class="sectionHeading">Open Source</h2>
+                <div class="projectSectionList">
+                    
+                    <!-- CP Helper -->
+                    <a href="https://github.com/shakibuzzaman52/cp-helper" target="_blank" rel="noopener noreferrer" class="projectItem">
+                        <div class="projectIcon">
+                            <!-- Replace src with your image path. If not found, fallback icon will show. -->
+                            <img src="assets/cp-helper.png" alt="CP Helper Icon" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <i class="fa-solid fa-folder defaultIcon"></i>
+                        </div>
+                        <div class="projectContent">
+                            <h3 class="projectTitle">CP Helper</h3>
+                            <p class="projectDescription">A fast, lightweight CLI boilerplate tool for competitive programming in C++.</p>
+                        </div>
+                    </a>
+
+                    <!-- Algo Visualizer -->
+                    <a href="javascript:void(0)" class="projectItem">
+                        <div class="projectIcon">
+                            <!-- Replace src with your image path. If not found, fallback icon will show. -->
+                            <img src="assets/algo-visual.png" alt="Algo Visualizer Icon" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <i class="fa-solid fa-folder defaultIcon"></i>
+                        </div>
+                        <div class="projectContent">
+                            <h3 class="projectTitle">Algo Visualizer</h3>
+                            <p class="projectDescription">Interactive playground demonstrating sorting, searching, and tree routines dynamically.</p>
+                        </div>
+                    </a>
+
+                    <!-- Cinemania -->
+                    <a href="javascript:void(0)" class="projectItem">
+                        <div class="projectIcon">
+                            <!-- Replace src with your image path. If not found, fallback icon will show. -->
+                            <img src="assets/cinemania.png" alt="Cinemania Icon" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <i class="fa-solid fa-folder defaultIcon"></i>
+                        </div>
+                        <div class="projectContent">
+                            <h3 class="projectTitle">Cinemania</h3>
+                            <p class="projectDescription">A personal dashboard application constructed to index, rate, and review movies.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Section 2: CP Ecosystem -->
+            <div class="projectSection">
+                <h2 class="sectionHeading">CP Ecosystem</h2>
+                <div class="projectSectionList">
+                    
+                    <!-- CP Templates -->
+                    <a href="javascript:void(0)" class="projectItem">
+                        <div class="projectIcon">
+                            <img src="assets/cp-templates.png" alt="CP Templates Icon" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <i class="fa-solid fa-folder defaultIcon"></i>
+                        </div>
+                        <div class="projectContent">
+                            <h3 class="projectTitle">CP Templates</h3>
+                            <p class="projectDescription">Optimized C++ template libraries containing essential pre-written algorithms.</p>
+                        </div>
+                    </a>
+
+                    <!-- DSA Handbook -->
+                    <a href="javascript:void(0)" class="projectItem">
+                        <div class="projectIcon">
+                            <img src="assets/dsa-handbook.png" alt="DSA Handbook Icon" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <i class="fa-solid fa-folder defaultIcon"></i>
+                        </div>
+                        <div class="projectContent">
+                            <h3 class="projectTitle">DSA Handbook</h3>
+                            <p class="projectDescription">Comprehensive Markdown handbook compiling foundational computer science theories.</p>
+                        </div>
+                    </a>
+
+                    <!-- Problem Solutions Tracker -->
+                    <a href="https://codeforces.com/profile/shakibuzzaman52" target="_blank" rel="noopener noreferrer" class="projectItem">
+                        <div class="projectIcon">
+                            <img src="assets/solutions-tracker.png" alt="Problem Solutions Tracker Icon" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <i class="fa-solid fa-folder defaultIcon"></i>
+                        </div>
+                        <div class="projectContent">
+                            <h3 class="projectTitle">Problem Solutions Tracker</h3>
+                            <p class="projectDescription">Systematic repository tracking solutions to challenging Codeforces and LeetCode problems.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footerSection">
+        <div class="footer">
+            <p>Thanks for visiting! Let's keep learning, creating and improving together.</p>
+        </div>
+    </footer>
+
+    <!-- Back To Top Control -->
+    <a href="#" class="backToTop" id="backToTop" title="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- UI Logic Scripts -->
+    <script>
+        // Track document scroll offsets to manage visibility parameters
+        window.addEventListener("scroll", function () {
+            const btn = document.getElementById("backToTop");
+            if (window.scrollY > 50) {
+                btn.classList.add("active");
+            } else {
+                btn.classList.remove("active");
+            }
+        });
+
+        // Click interaction workflow for dynamic layout transitions
+        document.getElementById("backToTop").onclick = function (e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        };
+    </script>
+</body>
+</html>

@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
     <style>
@@ -28,8 +28,7 @@
 
         html {
             scroll-behavior: smooth;
-            scrollbar-width: none;
-            /* Hide scrollbar Firefox */
+            scrollbar-width: none; /* Hide scrollbar Firefox */
         }
 
         body {
@@ -40,8 +39,8 @@
             color: #ffffff;
             font-size: 1rem;
             line-height: 1.8;
-            -ms-overflow-style: none;
-            /* Hide scrollbar IE/Edge */
+            -ms-overflow-style: none; /* Hide scrollbar IE/Edge */
+            animation: pageFadeIn 0.4s ease-in-out;
         }
 
         /* Hide scrollbar Chrome, Edge, Safari */
@@ -53,7 +52,7 @@
            TYPOGRAPHY & SHARED
         ======================= */
         .text-muted {
-            color: #cdcdcd;
+            color: #888888; /* Darker/blacker gray description text */
             font-size: 1rem;
         }
 
@@ -271,7 +270,7 @@
         }
 
         .mail a {
-            color: #cdcdcd;
+            color: #888888; /* Soft dark gray link */
             text-decoration: none;
             font-family: "DM Mono", monospace;
             font-size: 0.95rem;
@@ -390,9 +389,8 @@
         }
 
         /* =======================
-           RESPONSIVE DESIGN
+           PAGE ANIMATIONS
         ======================= */
-
         body {
             animation: pageFadeIn 0.4s ease-in-out;
         }
@@ -401,7 +399,6 @@
             from {
                 opacity: 0;
             }
-
             to {
                 opacity: 1;
             }
@@ -432,13 +429,13 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:void(0)" title="Projects">
+                        <a href="projects.html" title="Projects">
                             <i class="fa-regular fa-folder"></i>
                             <span>Projects</span>
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:void(0)" title="Resources">
+                        <a href="resources.html" title="Resources">
                             <i class="fa-regular fa-file-pdf"></i>
                             <span>Resources</span>
                         </a>
@@ -507,12 +504,12 @@
             <div class="currentlyDescription">
                 <p class="text-muted">
                     I enjoy learning new concepts and turning ideas into projects. I continuously improve my skills
-                    through consistent practice. Explore my <a href="javascript:void(0)"
+                    through consistent practice. Explore my <a href="projects.html"
                         class="highlight-link">Projects</a> to see what I've built. Read my <a href="blog.html"
                         title="Blog" class="highlight-link">Blog</a> to follow my journey. Check out my <a
                         href="javascript:void(0)" class="highlight-link">Resources</a>. View my <a
                         href="javascript:void(0)" class="highlight-link">Achievements</a>. Learn more about me through
-                    my <a href="javascript:void(0)" class="highlight-link">Resume</a>.
+                    my <a href="education.html" class="highlight-link">Resume</a>.
                 </p>
             </div>
             <div class="futureDescription">
