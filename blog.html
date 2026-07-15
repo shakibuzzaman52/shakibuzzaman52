@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +24,6 @@
 
         html {
             scroll-behavior: smooth;
-            scrollbar-width: none; /* Hide scrollbar Firefox */
         }
 
         body {
@@ -37,12 +37,6 @@
             color: #ffffff;
             font-size: 1rem;
             line-height: 1.8;
-            -ms-overflow-style: none; /* Hide scrollbar IE/Edge */
-        }
-
-        /* Hide scrollbar Chrome, Edge, Safari */
-        ::-webkit-scrollbar {
-            display: none;
         }
 
         /* =======================
@@ -136,7 +130,18 @@
             font-size: 2.2rem;
             font-weight: 750;
             letter-spacing: -0.5px;
-            margin-bottom: 35px;
+            margin-bottom: 30px;
+        }
+
+        .blogSubtitle {
+            color: #9a9a9a;
+            font-size: 0.9rem;
+            line-height: 1.7;
+            max-width: 520px;
+            margin-top: -15px;
+            margin-bottom: 38px;
+            letter-spacing: 0.2px;
+            font-family: "DM Mono", monospace;
         }
 
         .blogList {
@@ -216,6 +221,23 @@
             pointer-events: auto;
         }
 
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #050505;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #111111;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #222222;
+        }
+
         /* =======================
            RESPONSIVE DESIGN
         ======================= */
@@ -267,7 +289,6 @@
             }
         }
 
-        
         /* =======================
            RESPONSIVE DESIGN
         ======================= */
@@ -287,6 +308,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <div id="top"></div>
@@ -329,6 +351,9 @@
     <main>
         <section class="blogSection">
             <h1>Blog</h1>
+            <p class="blogSubtitle">
+                A collection of articles, thoughts, and experiences from my journey.
+            </p>
 
             <div class="blogList">
                 <article class="blogPost">
@@ -377,4 +402,5 @@
         };
     </script>
 </body>
+
 </html>
