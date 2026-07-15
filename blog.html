@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,10 +36,31 @@
             color: #ffffff;
             font-size: 1rem;
             line-height: 1.8;
+            animation: pageFadeIn 0.4s ease-in-out;
         }
 
         /* =======================
-           HEADER & NAV
+           SCROLLBAR MANAGEMENT
+        ======================= */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #050505;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #111111;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #222222;
+        }
+
+        /* =======================
+           HEADER & NAVIGATION
         ======================= */
         header {
             width: 100%;
@@ -111,7 +131,7 @@
         }
 
         /* =======================
-           MAIN LAYOUT
+           MAIN LAYOUT & TYPOGRAPHY
         ======================= */
         main {
             flex: 1;
@@ -124,7 +144,7 @@
         }
 
         /* =======================
-           BLOG SECTION
+           BLOG CONTAINER & ITEMS
         ======================= */
         .blogSection h1 {
             font-size: 2.2rem;
@@ -156,7 +176,7 @@
             gap: 4px;
         }
 
-        .blogPost a {
+        .blogPost > a {
             color: #b5b5b5;
             text-decoration: none;
             font-size: 1.1rem;
@@ -164,7 +184,7 @@
             transition: color 0.3s ease;
         }
 
-        .blogPost a:hover {
+        .blogPost > a:hover {
             color: #ffffff;
         }
 
@@ -174,8 +194,41 @@
             font-size: 0.82rem;
         }
 
+        /* Metadata & Actions */
+        .blogMeta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 2px;
+        }
+
+        .blogActions {
+            display: flex;
+            gap: 16px;
+        }
+
+        .blogActions a {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #777;
+            text-decoration: none;
+            font-family: "Inter", Arial, Helvetica, sans-serif;
+            font-size: 0.78rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .blogActions a i {
+            font-size: 0.75rem;
+        }
+
+        .blogActions a:hover {
+            color: #ffffff;
+        }
+
         /* =======================
-           FOOTER
+           FOOTER SECTION
         ======================= */
         .footerSection {
             width: min(700px, 80%);
@@ -221,21 +274,12 @@
             pointer-events: auto;
         }
 
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #050505;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #111111;
-            border-radius: 10px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #222222;
+        /* =======================
+           PAGE ANIMATIONS
+        ======================= */
+        @keyframes pageFadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         /* =======================
@@ -280,35 +324,28 @@
                 font-size: 1.6rem;
             }
 
-            .blogPost a {
+            .blogPost > a {
                 font-size: 1rem;
             }
 
             .blogPost p {
                 font-size: 0.78rem;
             }
-        }
 
-        /* =======================
-           RESPONSIVE DESIGN
-        ======================= */
-
-        body {
-            animation: pageFadeIn 0.4s ease-in-out;
-        }
-
-        @keyframes pageFadeIn {
-            from {
-                opacity: 0;
+            .blogMeta {
+                align-items: center;
             }
 
-            to {
-                opacity: 1;
+            .blogActions {
+                gap: 12px;
+            }
+
+            .blogActions a {
+                font-size: 0.75rem;
             }
         }
     </style>
 </head>
-
 <body>
 
     <div id="top"></div>
@@ -352,22 +389,28 @@
         <section class="blogSection">
             <h1>Blog</h1>
             <p class="blogSubtitle">
-                A collection of articles, thoughts, and experiences from my journey.
+                My journey, thoughts, and experiences.
             </p>
 
             <div class="blogList">
                 <article class="blogPost">
-                    <a href="articles/my-journey-into-competitive-programming.html">
+                    <a class="postLink" href="articles/my-journey-into-competitive-programming.html">
                         My Journey into Competitive Programming
                     </a>
-                    <p>July 14, 2026</p>
-                </article>
 
-                <article class="blogPost">
-                    <a href="articles/building-my-portfolio-website.html">
-                        Building My Personal Portfolio Website
-                    </a>
-                    <p>July 10, 2026</p>
+                    <div class="blogMeta">
+                        <p>July 14, 2026</p>
+                        <div class="blogActions">
+                            <a class="readBtn">
+                                <i class="fa-solid fa-book-open"></i>
+                                Read
+                            </a>
+                            <a href="#" class="shareBtn">
+                                <i class="fa-solid fa-share-nodes"></i>
+                                Share
+                            </a>
+                        </div>
+                    </div>
                 </article>
             </div>
         </section>
@@ -384,6 +427,7 @@
     </a>
 
     <script>
+        // Back to top button visibility controller
         window.addEventListener("scroll", function () {
             const btn = document.getElementById("backToTop");
             if (window.scrollY > 50) {
@@ -393,6 +437,7 @@
             }
         });
 
+        // Back to top click handler
         document.getElementById("backToTop").onclick = function (e) {
             e.preventDefault();
             window.scrollTo({
@@ -400,7 +445,34 @@
                 behavior: "smooth"
             });
         };
+
+        // Blog Post dynamic routing and social Web-Share APIs
+        document.querySelectorAll(".blogPost").forEach(post => {
+            const postLink = post.querySelector(".postLink");
+            const readBtn = post.querySelector(".readBtn");
+            const shareBtn = post.querySelector(".shareBtn");
+
+            const link = postLink.href;
+            const title = postLink.innerText;
+
+            // Bind the active URL to Read elements
+            readBtn.href = link;
+
+            // Operational share system
+            shareBtn.onclick = function (e) {
+                e.preventDefault();
+                if (navigator.share) {
+                    navigator.share({
+                        title: title,
+                        text: "Read my blog post: " + title,
+                        url: link
+                    });
+                } else {
+                    navigator.clipboard.writeText(link);
+                    alert("Link copied!");
+                }
+            };
+        });
     </script>
 </body>
-
 </html>
