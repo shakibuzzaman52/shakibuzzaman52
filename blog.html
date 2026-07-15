@@ -147,7 +147,7 @@
             line-height: 1.7;
             max-width: 520px;
             margin-top: -15px;
-            margin-bottom: 38px;
+            margin-bottom: 35px;
             letter-spacing: 0.2px;
             font-family: "DM Mono", monospace;
         }
@@ -155,41 +155,69 @@
         .blogList {
             display: flex;
             flex-direction: column;
-            gap: 25px;
+            gap: 14px;
         }
 
+        /* Minimal Block Style Card (No Hover Background) */
         .blogPost {
             display: flex;
             flex-direction: column;
-            gap: 4px;
+            gap: 6px;
+            padding: 12px 0; /* Pure vertical padding, no background boxes */
+            background-color: transparent;
         }
 
-        .blogPost > a {
-            color: #ffffff; /* Bright Title Color */
+        .postLink {
+            color: #ffffff; /* Bright Title Color strictly matching projects.html */
             text-decoration: none;
             font-size: 1.15rem;
             font-weight: 550;
-            transition: color 0.3s ease;
+            line-height: 1.4;
+            transition: color 0.25s ease;
         }
 
-        .blogPost > a:hover {
-            color: #ffffff;
+        .postLink:hover {
+            color: #bcbcbc; /* Soft interactive color on hover */
         }
 
-        .blogPost p {
-            color: #888888; /* Darker metadata gray */
+        /* Custom Section Heading with a minimal line to fill space */
+        .sectionHeader {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        .sectionHeading {
+            color: #cdcdcd;
+            font-size: 1rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
             font-family: "DM Mono", monospace;
-            font-size: 0.82rem;
+        }
+
+        .sectionLine {
+            flex-grow: 1;
+            border-bottom: 1px solid #1f1f1f; /* Soft minimal year divider */
+            height: 1px;
         }
 
         /* =======================
-           BLOG ACTION BUTTONS
+           BLOG ACTION BUTTONS & META
         ======================= */
         .blogMeta {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-top: 2px;
+            margin-top: 4px;
+        }
+
+        .blogMeta p {
+            color: #888888; /* Darker metadata gray */
+            font-family: "DM Mono", monospace;
+            font-size: 0.82rem;
         }
 
         .blogActions {
@@ -200,17 +228,17 @@
         .blogActions a {
             display: flex;
             align-items: center;
-            gap: 7px;
-            color: #888888; /* Muted gray actions */
+            gap: 6px;
+            color: #555555; /* Quiet actions */
             text-decoration: none;
             font-family: "Inter", Arial, Helvetica, sans-serif;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             cursor: pointer;
-            transition: color 0.3s ease;
+            transition: color 0.25s ease;
         }
 
         .blogActions a i {
-            font-size: 0.9rem;
+            font-size: 0.82rem;
         }
 
         .blogActions a:hover {
@@ -312,15 +340,20 @@
                 width: 88%;
             }
 
-            .blogSection h1 {
+            .pageSection h1 {
                 font-size: 1.6rem;
             }
 
-            .blogPost > a {
+            .blogPost {
+                padding: 12px 0;
+                gap: 4px;
+            }
+
+            .postLink {
                 font-size: 1.02rem;
             }
 
-            .blogPost p {
+            .blogMeta p {
                 font-size: 0.78rem;
             }
 
@@ -389,6 +422,12 @@
             </p>
 
             <div class="blogList">
+                <!-- Section Header with minimal space-filling line -->
+                <div class="sectionHeader">
+                    <h2 class="sectionHeading">2026</h2>
+                    <span class="sectionLine"></span>
+                </div>
+                
                 <article class="blogPost">
                     <a class="postLink" href="articles/my-journey-into-competitive-programming.html">
                         My Journey into Competitive Programming
