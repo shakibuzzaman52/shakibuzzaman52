@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources | Shakib Uz Zaman</title>
+
+    <!-- Icon & Font Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+        /* =======================
+           RESET & BASE STYLES
+        ======================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scrollbar-width: none; /* Hide scrollbar Firefox */
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-family: "Inter", Arial, Helvetica, sans-serif;
+            background-color: #050505;
+            background-image: radial-gradient(#1f1f1f 1px, transparent 1px);
+            background-size: 22px 22px;
+            color: #ffffff;
+            font-size: 1rem;
+            line-height: 1.8;
+            -ms-overflow-style: none; /* Hide scrollbar IE/Edge */
+            animation: pageFadeIn 0.4s ease-in-out;
+        }
+
+        /* Hide scrollbar Chrome, Edge, Safari */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* =======================
+           HEADER & NAVIGATION
+        ======================= */
+        header {
+            width: 100%;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 90px;
+            padding: 0 3%;
+        }
+
+        .left {
+            display: flex;
+            align-items: center;
+        }
+
+        .profileLink {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .left img {
+            width: 46px;
+            height: 46px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .profileText {
+            display: flex;
+            align-items: flex-end;
+            height: 46px;
+            padding-bottom: 2px;
+        }
+
+        .profileText span {
+            font-family: "DM Mono", monospace;
+            font-size: 0.78rem;
+            color: #bcbcbc;
+        }
+
+        .right ul {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .right ul li a {
+            color: #999;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .right ul li a:hover {
+            color: #ffffff;
+        }
+
+        .right ul li a i {
+            display: none;
+        }
+
+        /* =======================
+           MAIN LAYOUT
+        ======================= */
+        main {
+            flex: 1;
+            width: min(700px, 80%);
+            margin: auto;
+        }
+
+        section {
+            margin: 50px 0;
+        }
+
+        /* =======================
+           RESOURCES TYPOGRAPHY
+        ======================= */
+        .pageSection h1 {
+            font-size: 2.2rem;
+            font-weight: 750;
+            letter-spacing: -0.5px;
+            margin-bottom: 30px;
+        }
+
+        .pageSubtitle {
+            color: #888888;
+            font-size: 0.92rem;
+            line-height: 1.7;
+            max-width: 520px;
+            margin-top: -15px;
+            margin-bottom: 35px;
+            font-family: "DM Mono", monospace;
+        }
+
+        /* =======================
+           SECTIONS LAYOUT
+        ======================= */
+        .resourceSection {
+            margin-bottom: 45px;
+        }
+
+        .sectionHeader {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+
+        .sectionHeading {
+            color: #cdcdcd;
+            font-size: 1rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-family: "DM Mono", monospace;
+        }
+
+        .sectionLine {
+            flex-grow: 1;
+            border-bottom: 1px solid #1f1f1f;
+            height: 1px;
+        }
+
+        .resourceList {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* =======================
+           TALKS STYLE COMPONENT (Talks UI Style - No Hover BG)
+        ======================= */
+        .talk-item {
+            display: flex;
+            flex-direction: column;
+            background-color: transparent;
+            padding: 10px 0;
+        }
+
+        .talk-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 8px;
+            letter-spacing: -0.015em;
+        }
+
+        .postLink {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.25s ease;
+        }
+
+        .postLink:hover {
+            color: #bcbcbc;
+        }
+
+        .talk-description {
+            font-size: 1rem;
+            color: #666666;
+            margin-bottom: 15px;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        /* =======================
+           RESOURCE ACTIONS (Bottom Right)
+        ======================= */
+        .talk-meta {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .talk-actions {
+            display: flex;
+            gap: 20px;
+        }
+
+        .talk-actions a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #555555;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-family: "Inter", Arial, sans-serif;
+            cursor: pointer;
+            transition: color 0.25s ease;
+        }
+
+        .talk-actions a i {
+            font-size: 0.82rem;
+        }
+
+        .talk-actions a:hover {
+            color: #ffffff;
+        }
+
+        /* Decorative Centered Divider matching Anthony's screenshot */
+        .talk-divider {
+            width: 50px;
+            height: 1px;
+            background-color: #202020;
+            margin: 40px auto;
+        }
+
+        /* =======================
+           FOOTER SECTION
+        ======================= */
+        .footerSection {
+            width: min(700px, 80%);
+            margin: auto;
+            padding: 25px 0;
+            border-top: 1px solid #262626;
+        }
+
+        .footer p {
+            color: #cdcdcd;
+            font-size: 0.9rem;
+        }
+
+        /* =======================
+           BACK TO TOP CONTROL
+        ======================= */
+        .backToTop {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #888;
+            background: transparent;
+            border-radius: 50%;
+            text-decoration: none;
+            opacity: 0;
+            pointer-events: none;
+            cursor: pointer;
+            transition: 0.3s ease;
+            z-index: 9999;
+        }
+
+        .backToTop:hover {
+            color: white;
+            background: #161616e1;
+        }
+
+        .backToTop.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* =======================
+           PAGE ANIMATIONS
+        ======================= */
+        @keyframes pageFadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* =======================
+           RESPONSIVE INTERFACES
+        ======================= */
+        @media(max-width: 768px) {
+            nav {
+                height: 80px;
+                padding: 0 6%;
+            }
+
+            .profileText,
+            .right ul li a span {
+                display: none;
+            }
+
+            .left img {
+                width: 42px;
+                height: 42px;
+            }
+
+            .right ul {
+                gap: 18px;
+            }
+
+            .right ul li a i {
+                display: block;
+                color: #999;
+                font-size: 1.1rem;
+                transition: color 0.3s ease;
+            }
+
+            main,
+            .footerSection {
+                width: 88%;
+            }
+
+            .pageSection h1 {
+                font-size: 1.6rem;
+            }
+
+            .talk-item {
+                padding: 12px 0;
+            }
+
+            .talk-title {
+                font-size: 1.3rem;
+            }
+
+            .talk-description {
+                font-size: 0.95rem;
+                line-height: 1.5;
+            }
+
+            .talk-meta {
+                justify-content: flex-start;
+                margin-top: 15px;
+            }
+
+            .talk-actions {
+                gap: 14px;
+            }
+
+            .talk-actions a {
+                font-size: 0.85rem;
+            }
+
+            .talk-actions a i {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Scroll Target Anchor -->
+    <div id="top"></div>
+
+    <!-- Navigation Header -->
+    <header>
+        <nav>
+            <div class="left">
+                <a href="index.html" class="profileLink">
+                    <img src="https://github.com/shakibuzzaman52.png" alt="Profile">
+                    <div class="profileText">
+                        <span>shakibuzzaman52.me</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="right">
+                <ul>
+                    <li>
+                        <a href="blog.html" title="Blog">
+                            <i class="fa-regular fa-newspaper"></i>
+                            <span>Blog</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="projects.html" title="Projects">
+                            <i class="fa-regular fa-folder"></i>
+                            <span>Projects</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="resources.html" title="Resources">
+                            <i class="fa-regular fa-file-pdf"></i>
+                            <span>Resources</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Workspace Content -->
+    <main>
+        <section class="pageSection">
+            <h1>Resources</h1>
+            <p class="pageSubtitle">
+                Resources that I have collected.
+            </p>
+
+            <!-- Section 1: Academic Notes -->
+            <div class="resourceSection">
+                <div class="sectionHeader">
+                    <h2 class="sectionHeading">Academic Notes</h2>
+                    <span class="sectionLine"></span>
+                </div>
+                
+                <div class="resourceList">
+                    
+                    <!-- Resource Item 1: DSA Lectures -->
+                    <div class="talk-item">
+                        <h2 class="talk-title">
+                            <a class="postLink" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                                Data Structures & Algorithms Lectures
+                            </a>
+                        </h2>
+                        <p class="talk-description">An interactive series of video lectures and tutorials covering foundational dynamic arrays, trees, and graphs.</p>
+                        
+                        <div class="talk-meta">
+                            <div class="talk-actions">
+                                <a class="watchBtn">
+                                    ▷ Watch
+                                </a>
+                                <a class="shareBtn" href="#">
+                                    <i class="fa-solid fa-share-nodes"></i> Share
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footerSection">
+        <div class="footer">
+            <p>Thanks for visiting! Let's keep learning, creating and improving together.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Scroll Top Control -->
+    <a href="#" class="backToTop" id="backToTop" title="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- UI Logic Scripts -->
+    <script>
+        // Track document scroll offsets to manage visibility parameters
+        window.addEventListener("scroll", function () {
+            const btn = document.getElementById("backToTop");
+            if (window.scrollY > 50) {
+                btn.classList.add("active");
+            } else {
+                btn.classList.remove("active");
+            }
+        });
+
+        // Click interaction workflow for dynamic layout transitions
+        document.getElementById("backToTop").onclick = function (e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        };
+
+        // Custom Link Binding & Share system for Resources using the Web Share API
+        document.querySelectorAll(".talk-item").forEach(post => {
+            const postLink = post.querySelector(".postLink");
+            const watchBtn = post.querySelector(".watchBtn");
+            const downloadBtn = post.querySelector(".downloadBtn");
+            const shareBtn = post.querySelector(".shareBtn");
+
+            const mainLink = postLink.href;
+            
+            if (watchBtn) {
+                watchBtn.href = mainLink;
+                watchBtn.target = "_blank";
+                watchBtn.rel = "noopener noreferrer";
+            }
+            
+            if (downloadBtn) {
+                downloadBtn.href = mainLink;
+                downloadBtn.target = "_blank";
+                downloadBtn.rel = "noopener noreferrer";
+            }
+
+            const resourceTitle = postLink.innerText;
+
+            shareBtn.onclick = function (e) {
+                e.preventDefault();
+                if (navigator.share) {
+                    navigator.share({
+                        title: resourceTitle,
+                        text: "Check out this resource: " + resourceTitle,
+                        url: mainLink
+                    });
+                } else {
+                    navigator.clipboard.writeText(mainLink);
+                    alert("Link copied!");
+                }
+            };
+        });
+    </script>
+</body>
+</html>
