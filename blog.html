@@ -18,6 +18,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
         }
 
         html {
@@ -263,6 +264,25 @@
 
             .blogPost p {
                 font-size: 0.78rem;
+            }
+        }
+
+        
+        /* =======================
+           RESPONSIVE DESIGN
+        ======================= */
+
+        body {
+            animation: pageFadeIn 0.4s ease-in-out;
+        }
+
+        @keyframes pageFadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
             }
         }
     </style>
