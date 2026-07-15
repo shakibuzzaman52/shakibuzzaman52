@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
     <style>
         /* =======================
@@ -20,11 +23,13 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
         }
 
         html {
             scroll-behavior: smooth;
-            scrollbar-width: none; /* Hide scrollbar Firefox */
+            scrollbar-width: none;
+            /* Hide scrollbar Firefox */
         }
 
         body {
@@ -35,7 +40,8 @@
             color: #ffffff;
             font-size: 1rem;
             line-height: 1.8;
-            -ms-overflow-style: none; /* Hide scrollbar IE/Edge */
+            -ms-overflow-style: none;
+            /* Hide scrollbar IE/Edge */
         }
 
         /* Hide scrollbar Chrome, Edge, Safari */
@@ -174,7 +180,7 @@
             gap: 4px;
         }
 
-        .secondSection > div {
+        .secondSection>div {
             display: flex;
             align-items: center;
             flex-wrap: wrap;
@@ -367,7 +373,7 @@
                 font-size: 1.6rem;
             }
 
-            .secondSection > div {
+            .secondSection>div {
                 align-items: flex-start;
             }
 
@@ -382,8 +388,27 @@
                 word-break: break-word;
             }
         }
+
+        /* =======================
+           RESPONSIVE DESIGN
+        ======================= */
+
+        body {
+            animation: pageFadeIn 0.4s ease-in-out;
+        }
+
+        @keyframes pageFadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <div id="top"></div>
@@ -430,7 +455,8 @@
             </div>
             <div class="bio">
                 <p class="text-muted">
-                    Hey! I'm Shakib Uz Zaman, a <a href="javascript:void(0)" class="highlight-link">CSE undergraduate</a>, competitive programmer and problem solver.
+                    Hey! I'm Shakib Uz Zaman, a <a href="javascript:void(0)" class="highlight-link">CSE
+                        undergraduate</a>, competitive programmer and problem solver.
                 </p>
             </div>
         </section>
@@ -447,23 +473,31 @@
 
             <div class="competitiveProg">
                 <h3>Competitive Programming</h3>
-                <span><a href="https://codeforces.com/profile/shakibuzzaman52" target="_blank" rel="noopener noreferrer"><i class="si si-codeforces" style="color:#ca2606;"></i> Codeforces</a></span>
-                <span><a href="https://leetcode.com/u/shakibuzzaman52/" target="_blank" rel="noopener noreferrer"><i class="si si-leetcode" style="color:#ca9e0b;"></i> LeetCode</a></span>
-                <span><a href="https://www.codechef.com/users/shakibuzzaman" target="_blank" rel="noopener noreferrer"><i class="si si-codechef" style="color:#ffffff;"></i> CodeChef</a></span>
+                <span><a href="https://codeforces.com/profile/shakibuzzaman52" target="_blank"
+                        rel="noopener noreferrer"><i class="si si-codeforces" style="color:#ca2606;"></i>
+                        Codeforces</a></span>
+                <span><a href="https://leetcode.com/u/shakibuzzaman52/" target="_blank" rel="noopener noreferrer"><i
+                            class="si si-leetcode" style="color:#ca9e0b;"></i> LeetCode</a></span>
+                <span><a href="https://www.codechef.com/users/shakibuzzaman" target="_blank"
+                        rel="noopener noreferrer"><i class="si si-codechef" style="color:#ffffff;"></i>
+                        CodeChef</a></span>
             </div>
 
             <div class="devTools">
                 <h3>Developer Tools</h3>
                 <span><a href="javascript:void(0)"><i class="devicon-vscode-plain colored"></i> VS Code</a></span>
                 <span><a href="javascript:void(0)"><i class="devicon-git-plain colored"></i> Git</a></span>
-                <span><a href="https://github.com/shakibuzzaman52" target="_blank" rel="noopener noreferrer"><i class="devicon-github-original"></i> GitHub</a></span>
+                <span><a href="https://github.com/shakibuzzaman52" target="_blank" rel="noopener noreferrer"><i
+                            class="devicon-github-original"></i> GitHub</a></span>
             </div>
 
             <div class="currentlyLearning">
                 <h3>Currently Learning</h3>
                 <span><a href="javascript:void(0)"><i class="devicon-cplusplus-plain colored"></i> C++</a></span>
-                <span><a href="javascript:void(0)"><i class="fa-solid fa-diagram-project" style="color:#00d486;"></i> Data Structures</a></span>
-                <span><a href="javascript:void(0)"><i class="fa-solid fa-brain" style="color:#fafafa;"></i> Algorithms</a></span>
+                <span><a href="javascript:void(0)"><i class="fa-solid fa-diagram-project" style="color:#00d486;"></i>
+                        Data Structures</a></span>
+                <span><a href="javascript:void(0)"><i class="fa-solid fa-brain" style="color:#fafafa;"></i>
+                        Algorithms</a></span>
                 <span><a href="javascript:void(0)"><i class="devicon-python-plain colored"></i> Python</a></span>
             </div>
         </section>
@@ -471,16 +505,24 @@
         <section class="threeSection">
             <div class="currentlyDescription">
                 <p class="text-muted">
-                    I enjoy learning new concepts and turning ideas into projects. I continuously improve my skills through consistent practice. Explore my <a href="javascript:void(0)" class="highlight-link">Projects</a> to see what I've built. Read my <a href="blog.html" title="Blog" class="highlight-link">Blog</a> to follow my journey. Check out my <a href="javascript:void(0)" class="highlight-link">Resources</a>. View my <a href="javascript:void(0)" class="highlight-link">Achievements</a>. Learn more about me through my <a href="javascript:void(0)" class="highlight-link">Resume</a>.
+                    I enjoy learning new concepts and turning ideas into projects. I continuously improve my skills
+                    through consistent practice. Explore my <a href="javascript:void(0)"
+                        class="highlight-link">Projects</a> to see what I've built. Read my <a href="blog.html"
+                        title="Blog" class="highlight-link">Blog</a> to follow my journey. Check out my <a
+                        href="javascript:void(0)" class="highlight-link">Resources</a>. View my <a
+                        href="javascript:void(0)" class="highlight-link">Achievements</a>. Learn more about me through
+                    my <a href="javascript:void(0)" class="highlight-link">Resume</a>.
                 </p>
             </div>
             <div class="futureDescription">
                 <p class="text-muted">
-                    Currently, I'm focused on C++, Data Structures and Algorithms, and competitive programming to build a solid foundation in computer science.
+                    Currently, I'm focused on C++, Data Structures and Algorithms, and competitive programming to build
+                    a solid foundation in computer science.
                 </p>
                 <br>
                 <p class="text-muted">
-                    Outside of programming, I enjoy watching movies. You can explore my <a href="javascript:void(0)" class="highlight-link">Movie Collection</a> to see the films I have watched.
+                    Outside of programming, I enjoy watching movies. You can explore my <a href="javascript:void(0)"
+                        class="highlight-link">Movie Collection</a> to see the films I have watched.
                 </p>
             </div>
         </section>
@@ -490,10 +532,14 @@
                 <h3>Find me on</h3>
             </div>
             <div class="findMePlatform">
-                <a href="https://github.com/shakibuzzaman52" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
-                <a href="https://www.linkedin.com/in/shakibuzzaman52" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-                <a href="https://www.instagram.com/shakibuzzaman_52" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a>
-                <a href="https://www.facebook.com/shakibuzzaman52" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                <a href="https://github.com/shakibuzzaman52" target="_blank" rel="noopener noreferrer"><i
+                        class="fa-brands fa-github"></i> GitHub</a>
+                <a href="https://www.linkedin.com/in/shakibuzzaman52" target="_blank" rel="noopener noreferrer"><i
+                        class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                <a href="https://www.instagram.com/shakibuzzaman_52" target="_blank" rel="noopener noreferrer"><i
+                        class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href="https://www.facebook.com/shakibuzzaman52" target="_blank" rel="noopener noreferrer"><i
+                        class="fa-brands fa-facebook"></i> Facebook</a>
             </div>
             <div class="mail">
                 <p class="text-muted">
@@ -532,4 +578,5 @@
         };
     </script>
 </body>
+
 </html>
