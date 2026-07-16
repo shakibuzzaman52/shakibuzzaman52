@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies | Shakib Uz Zaman</title>
+
+    <!-- Icon & Font Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+        /* =======================
+           RESET & BASE STYLES
+        ======================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scrollbar-width: none; /* Hide scrollbar Firefox */
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-family: "Inter", Arial, Helvetica, sans-serif;
+            background-color: #050505;
+            background-image: radial-gradient(#1f1f1f 1px, transparent 1px);
+            background-size: 22px 22px;
+            color: #ffffff;
+            font-size: 1rem;
+            line-height: 1.8;
+            -ms-overflow-style: none; /* Hide scrollbar IE/Edge */
+            animation: pageFadeIn 0.4s ease-in-out;
+        }
+
+        /* Hide scrollbar Chrome, Edge, Safari */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* =======================
+           HEADER & NAVIGATION
+        ======================= */
+        header {
+            width: 100%;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 90px;
+            padding: 0 3%;
+        }
+
+        .left {
+            display: flex;
+            align-items: center;
+        }
+
+        .profileLink {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .left img {
+            width: 46px;
+            height: 46px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .profileText {
+            display: flex;
+            align-items: flex-end;
+            height: 46px;
+            padding-bottom: 2px;
+        }
+
+        .profileText span {
+            font-family: "DM Mono", monospace;
+            font-size: 0.78rem;
+            color: #bcbcbc;
+        }
+
+        .right ul {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .right ul li a {
+            color: #999;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .right ul li a:hover {
+            color: #ffffff;
+        }
+
+        .right ul li a i {
+            display: none;
+        }
+
+        /* =======================
+           MAIN LAYOUT
+        ======================= */
+        main {
+            flex: 1;
+            width: min(700px, 80%);
+            margin: auto;
+        }
+
+        section {
+            margin: 50px 0;
+        }
+
+        /* =======================
+           MINIMALIST HEADER
+        ======================= */
+        .minimal-header h1 {
+            font-size: 2.2rem;
+            font-weight: 750;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+            color: #f5f5f5;
+        }
+
+        .minimal-subtitle {
+            color: #888888;
+            font-size: 0.92rem;
+            font-family: "DM Mono", monospace;
+            margin-bottom: 40px;
+        }
+
+        /* =======================
+           MOVIE RANKING LIST (Typographic Leaderboard Style)
+        ======================= */
+        .rank-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .rank-item {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            padding: 15px; 
+            border-radius: 8px; 
+            background-color: transparent; 
+            text-decoration: none;
+            color: inherit;
+            transition: background-color 0.25s ease;
+        }
+
+        .rank-item:hover {
+            background-color: #0c0c0c; /* Subtle background highlight on item hover */
+        }
+
+        /* Giant styled leaderboard ranking number */
+        .rank-number {
+            font-family: "DM Mono", monospace;
+            font-weight: 700;
+            font-size: 2.2rem;
+            color: #222222; /* Deep dark gray by default to blend in */
+            min-width: 50px;
+            text-align: right;
+            letter-spacing: -0.05em;
+            transition: color 0.25s ease;
+            user-select: none;
+        }
+
+        .rank-item:hover .rank-number {
+            color: #ffffff; /* Beautifully lights up to white on hover */
+        }
+
+        /* Compact widescreen poster wrapper */
+        .rank-poster-wrapper {
+            width: 96px;
+            aspect-ratio: 16/9; /* Perfect widescreen trailer ratio */
+            background-color: #000000;
+            border-radius: 4px;
+            overflow: hidden;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #141414;
+        }
+
+        .rank-poster-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .rank-loader {
+            font-size: 1.15rem;
+            color: #333333;
+        }
+
+        .rank-details {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            flex-grow: 1;
+            min-width: 0; /* CRITICAL: Prevents long text from pushing parent width/height boundaries */
+        }
+
+        .rank-title {
+            color: #ffffff;
+            font-size: 1.15rem; /* Larger, sleeker typography */
+            font-weight: 550;
+            line-height: 1.4;
+            letter-spacing: -0.01em;
+            transition: color 0.25s ease;
+            
+            /* Text Truncation to keep single-line beauty */
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: block;
+        }
+
+        .rank-item:hover .rank-title {
+            color: #ffffff;
+        }
+
+        /* Multi-element dynamic metadata row */
+        .rank-meta-row {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.82rem;
+            font-family: "DM Mono", monospace;
+            color: #555555; /* Soft monochrome gray */
+            transition: color 0.25s ease;
+            min-width: 0;
+        }
+
+        .rank-item:hover .rank-meta-row {
+            color: #888888; /* Slightly brightens up on card hover */
+        }
+
+        .rank-author {
+            color: inherit;
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 180px; /* Limits publisher name boundary on desktop */
+        }
+
+        .rank-bullet {
+            color: #222222; /* Subtle divider dots */
+            font-weight: bold;
+        }
+
+        .rank-platform {
+            color: inherit;
+            flex-shrink: 0;
+        }
+
+        /* Spinner keyframe for loading state */
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        .fa-spin {
+            animation: spin 1s linear infinite;
+        }
+
+        /* =======================
+           FOOTER
+        ======================= */
+        .footerSection {
+            width: min(700px, 80%);
+            margin: auto;
+            padding: 25px 0;
+            border-top: 1px solid #262626;
+        }
+
+        .footer p {
+            color: #cdcdcd;
+            font-size: 0.9rem;
+        }
+
+        /* =======================
+           BACK TO TOP BUTTON
+        ======================= */
+        .backToTop {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #888;
+            background: transparent;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 0.9rem;
+            opacity: 0;
+            pointer-events: none;
+            cursor: pointer;
+            transition: 0.3s ease;
+            z-index: 9999;
+        }
+
+        .backToTop:hover {
+            color: #fff;
+            background: #161616e1;
+        }
+
+        .backToTop.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* =======================
+           PAGE ANIMATIONS
+        ======================= */
+        body {
+            animation: pageFadeIn 0.4s ease-in-out;
+        }
+
+        @keyframes pageFadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* =======================
+           RESPONSIVE DESIGN
+        ======================= */
+        @media (max-width: 768px) {
+            nav {
+                height: 80px;
+                padding: 0 6%;
+            }
+
+            .profileText,
+            .right ul li a span {
+                display: none;
+            }
+
+            .left img {
+                width: 42px;
+                height: 42px;
+            }
+
+            .right ul {
+                gap: 18px;
+            }
+
+            .right ul li a i {
+                display: block;
+                color: #999;
+                font-size: 1.1rem;
+                transition: color 0.3s ease;
+            }
+
+            .right ul li a:hover i {
+                color: #ffffff;
+            }
+
+            main,
+            .footerSection {
+                width: 88%;
+            }
+
+            .minimal-header h1 {
+                font-size: 1.6rem;
+            }
+
+            .rank-item {
+                padding: 12px 6px;
+                gap: 16px;
+            }
+
+            .rank-number {
+                font-size: 1.6rem;
+                min-width: 36px;
+            }
+
+            .rank-poster-wrapper {
+                width: 72px;
+            }
+
+            .rank-title {
+                font-size: 1.02rem;
+            }
+
+            .rank-meta-row {
+                font-size: 0.75rem;
+                gap: 4px;
+            }
+
+            .rank-author {
+                max-width: 100px; /* Limits publisher name boundary on mobile screen to prevent bloating */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="top"></div>
+
+    <header>
+        <nav>
+            <div class="left">
+                <a href="index.html" class="profileLink">
+                    <img src="https://github.com/shakibuzzaman52.png" alt="Profile">
+                    <div class="profileText">
+                        <span>shakibuzzaman52.me</span>
+                    </div>
+                </a>
+            </div>
+            <div class="right">
+                <ul>
+                    <li>
+                        <a href="blog.html" title="Blog">
+                            <i class="fa-regular fa-newspaper"></i>
+                            <span>Blog</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="projects.html" title="Projects">
+                            <i class="fa-regular fa-folder"></i>
+                            <span>Projects</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="resources.html" title="Resources">
+                            <i class="fa-regular fa-file-pdf"></i>
+                            <span>Resources</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="pageSection">
+            
+            <!-- Minimalist Left-Aligned Header -->
+            <div class="minimal-header">
+                <h1>Watching</h1>
+                <p class="minimal-subtitle">My personal cinematic watch-diary and leaderboard.</p>
+            </div>
+
+            <!-- Netflix Styled Compact Grid (শুধুমাত্র data-url ব্যবহার করে ইউটিউব লিংক ইনপুট দেবেন) -->
+            <div class="rank-list">
+                
+                <!-- Ranked Movie Item 1 -->
+                <div class="rank-item" data-url="https://youtu.be/RMrbisbM-8w?si=624MfaUAH9iO_aE_"></div>
+
+                <!-- Ranked Movie Item 2 -->
+                <div class="rank-item" data-url="https://www.youtube.com/watch?v=YoHD9XEInc0"></div>
+
+                <!-- Ranked Movie Item 3 -->
+                <div class="rank-item" data-url="https://www.youtube.com/watch?v=LdOM0x0XDMo"></div>
+
+                <!-- Ranked Movie Item 4 -->
+                <div class="rank-item" data-url="https://www.youtube.com/watch?v=EXeTwQWrcwY"></div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footerSection">
+        <div class="footer">
+            <p>Thanks for visiting! Let's keep learning, creating and improving together.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Scroll Top Control -->
+    <a href="#" class="backToTop" id="backToTop" title="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- UI Logic Scripts -->
+    <script>
+        // Track document scroll offsets to manage visibility parameters
+        window.addEventListener("scroll", function () {
+            const btn = document.getElementById("backToTop");
+            if (window.scrollY > 50) {
+                btn.classList.add("active");
+            } else {
+                btn.classList.remove("active");
+            }
+        });
+
+        // Click interaction workflow for dynamic layout transitions
+        document.getElementById("backToTop").onclick = function (e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        };
+
+        // Intelligent client-side YouTube oEmbed dynamic Leaderboard card loader
+        document.querySelectorAll(".rank-item").forEach((item, index) => {
+            const youtubeUrl = item.getAttribute("data-url");
+            if (!youtubeUrl) return;
+
+            // Generate autoincrement index formatting (e.g. 01, 02)
+            const indexStr = String(index + 1).padStart(2, '0');
+
+            // Generate YouTube oEmbed CORS-enabled endpoint
+            const oembedUrl = `https://www.youtube.com/oembed?url=${encodeURIComponent(youtubeUrl)}&format=json`;
+
+            // Inject spinner loader while fetching resources
+            item.innerHTML = `
+                <span class="rank-number">${indexStr}</span>
+                <div class="rank-poster-wrapper">
+                    <div class="rank-loader"><i class="fa-solid fa-spinner fa-spin"></i></div>
+                </div>
+                <div class="rank-details">
+                    <h3 class="rank-title">Loading...</h3>
+                </div>
+            `;
+
+            // Request YouTube oEmbed API cross-origin
+            fetch(oembedUrl)
+                .then(response => {
+                    if (!response.ok) throw new Error("CORS or Resource error");
+                    return response.json();
+                })
+                .then(data => {
+                    const title = data.title || "Untitled Video";
+                    const channel = data.author_name || "YouTube Video";
+                    const thumbnail = data.thumbnail_url || "";
+
+                    // Construct completely populated minimalist Leaderboard row card (No Match Rating)
+                    item.innerHTML = `
+                        <span class="rank-number">${indexStr}</span>
+                        <div class="rank-poster-wrapper">
+                            <img src="${thumbnail}" alt="${title}">
+                        </div>
+                        <div class="rank-details">
+                            <h3 class="rank-title">
+                                <a href="${youtubeUrl}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+                                    ${title}
+                                </a>
+                            </h3>
+                            <div class="rank-meta-row">
+                                <span class="rank-author" title="${channel}">${channel}</span>
+                                <span class="rank-bullet">·</span>
+                                <span class="rank-platform">YouTube</span>
+                            </div>
+                        </div>
+                    `;
+                })
+                .catch(err => {
+                    // Fail-safe regex parser to extract YouTube thumbnail directly via CDN if fetch is blocked
+                    const ytRegex = /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/ ]{11})/;
+                    const match = youtubeUrl.match(ytRegex);
+                    let fallbackThumb = "";
+                    if (match && match[1]) {
+                        fallbackThumb = `https://img.youtube.com/vi/${match[1]}/0.jpg`;
+                    }
+
+                    // Graceful minimal layout restoration
+                    item.innerHTML = `
+                        <span class="rank-number">${indexStr}</span>
+                        <div class="rank-poster-wrapper">
+                            ${fallbackThumb ? `<img src="${fallbackThumb}" alt="Video">` : `<div class="rank-loader"><i class="fa-solid fa-film"></i></div>`}
+                        </div>
+                        <div class="rank-details">
+                            <h3 class="rank-title">
+                                <a href="${youtubeUrl}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+                                    Watch Video
+                                </a>
+                            </h3>
+                            <div class="rank-meta-row">
+                                <span class="rank-author">External Link</span>
+                                <span class="rank-bullet">·</span>
+                                <span class="rank-platform">Video</span>
+                            </div>
+                        </div>
+                    `;
+                });
+        });
+    </script>
+</body>
+</html>
