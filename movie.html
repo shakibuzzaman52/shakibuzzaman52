@@ -13,7 +13,7 @@
 
     <style>
         /* =======================
-           RESET & BASE STYLES
+            RESET & BASE STYLES
         ======================= */
         * {
             margin: 0;
@@ -48,7 +48,7 @@
         }
 
         /* =======================
-           HEADER & NAVIGATION
+            HEADER & NAVIGATION
         ======================= */
         header {
             width: 100%;
@@ -119,7 +119,7 @@
         }
 
         /* =======================
-           MAIN LAYOUT
+            MAIN LAYOUT
         ======================= */
         main {
             flex: 1;
@@ -132,7 +132,7 @@
         }
 
         /* =======================
-           MINIMALIST HEADER
+            MINIMALIST HEADER
         ======================= */
         .minimal-header h1 {
             font-size: 2.2rem;
@@ -150,7 +150,7 @@
         }
 
         /* =======================
-           MOVIE RANKING LIST (Typographic Leaderboard Style)
+            MOVIE RANKING LIST (Typographic Leaderboard Style)
         ======================= */
         .rank-list {
             display: flex;
@@ -288,7 +288,7 @@
         }
 
         /* =======================
-           FOOTER
+            FOOTER
         ======================= */
         .footerSection {
             width: min(700px, 80%);
@@ -303,7 +303,7 @@
         }
 
         /* =======================
-           BACK TO TOP BUTTON
+            BACK TO TOP BUTTON
         ======================= */
         .backToTop {
             position: fixed;
@@ -337,7 +337,7 @@
         }
 
         /* =======================
-           PAGE ANIMATIONS
+            PAGE ANIMATIONS
         ======================= */
         body {
             animation: pageFadeIn 0.4s ease-in-out;
@@ -349,7 +349,7 @@
         }
 
         /* =======================
-           RESPONSIVE DESIGN
+            RESPONSIVE DESIGN
         ======================= */
         @media (max-width: 768px) {
             nav {
@@ -444,7 +444,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="projects.html" title="Projects">
+                        <a href="project.html" title="Projects">
                             <i class="fa-regular fa-folder"></i>
                             <span>Projects</span>
                         </a>
@@ -469,20 +469,20 @@
                 <p class="minimal-subtitle">My personal cinematic watch-diary and leaderboard.</p>
             </div>
 
-            <!-- Netflix Styled Compact Grid (শুধুমাত্র data-url ব্যবহার করে ইউটিউব লিংক ইনপুট দেবেন) -->
+            <!-- Netflix Styled Compact Grid -->
             <div class="rank-list">
                 
-                <!-- Ranked Movie Item 1 -->
-                <div class="rank-item" data-url="https://youtu.be/RMrbisbM-8w?si=624MfaUAH9iO_aE_"></div>
+                <!-- Ranked Movie Item 1 (Interstellar Trailer) -->
+                <div class="rank-item" data-url="https://www.youtube.com/watch?v=zSWdZVtXT7E"></div>
 
-                <!-- Ranked Movie Item 2 -->
+                <!-- Ranked Movie Item 2 (Inception Trailer) -->
                 <div class="rank-item" data-url="https://www.youtube.com/watch?v=YoHD9XEInc0"></div>
 
-                <!-- Ranked Movie Item 3 -->
-                <div class="rank-item" data-url="https://www.youtube.com/watch?v=LdOM0x0XDMo"></div>
-
-                <!-- Ranked Movie Item 4 -->
+                <!-- Ranked Movie Item 3 (The Dark Knight Trailer) -->
                 <div class="rank-item" data-url="https://www.youtube.com/watch?v=EXeTwQWrcwY"></div>
+
+                <!-- Ranked Movie Item 4 (Oppenheimer Trailer) -->
+                <div class="rank-item" data-url="https://www.youtube.com/watch?v=uYPbbksJxIg"></div>
 
             </div>
         </section>
@@ -580,7 +580,7 @@
                     const match = youtubeUrl.match(ytRegex);
                     let fallbackThumb = "";
                     if (match && match[1]) {
-                        fallbackThumb = `https://img.youtube.com/vi/${match[1]}/0.jpg`;
+                        fallbackThumb = `https://img.youtube.com/vi/${match[1]}/hqdefault.jpg`;
                     }
 
                     // Graceful minimal layout restoration
