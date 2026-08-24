@@ -58,9 +58,7 @@
   <a href="mailto:shakibuzzaman52@gmail.com"><img src="https://skillicons.dev/icons?i=gmail" /></a>
   <a href="https://www.linkedin.com/in/shakibuzzaman52"><img src="https://skillicons.dev/icons?i=linkedin" /></a>
   <a href="https://github.com/shakibuzzaman52"><img src="https://skillicons.dev/icons?i=github" /></a>
-  <a href="https://x.com/shakibuzzaman52">
-  <img src="https://img.icons8.com/ios-filled/50/ffffff/x-twitter.png" style="background-color: #000; padding: 10px; border-radius: 12px; width: 28px; height: 28px; vertical-align: middle;" />
-</a>
+  <a href="https://x.com/shakibuzzaman52"><img src="https://skillicons.dev/icons?i=twitter" /></a>
   <a href="https://www.instagram.com/shakibuzzaman_52"><img src="https://skillicons.dev/icons?i=instagram" /></a>
   <a href="https://www.facebook.com/shakibuzzaman52">
     <img src="https://cdn.simpleicons.org/facebook/1877F2" width="48" height="48" />
