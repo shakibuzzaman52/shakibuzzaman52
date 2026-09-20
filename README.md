@@ -34,12 +34,12 @@
   </a>
 
   <a href="https://atcoder.jp/users/shakibuzzaman52">
-  &lt;/&gt;
-</a>
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/code.png" />
+  </a>
 
-<a href="https://vjudge.net/user/shakibuzzaman52">
-  &lt;/&gt;
-</a>
+  <a href="https://vjudge.net/user/shakibuzzaman52">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/code.png" />
+  </a>
 </p>
 
 ---
