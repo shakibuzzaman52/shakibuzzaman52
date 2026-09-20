@@ -34,11 +34,11 @@
   </a>
 
   <a href="https://atcoder.jp/users/shakibuzzaman52">
-    <img src="https://img.shields.io/badge/AtCoder-Profile-222222?style=for-the-badge&logo=https://img.atcoder.jp/logo/atcoder/logo_white.png&logoColor=white" />
+    <img src="https://img.shields.io/badge/AtCoder-Profile-222222?style=for-the-badge&logo=terminal&logoColor=white" />
   </a>
 
   <a href="https://vjudge.net/user/shakibuzzaman52">
-    <img src="https://img.shields.io/badge/VJudge-Profile-4B2E83?style=for-the-badge" />
+    <img src="https://img.shields.io/badge/VJudge-Profile-4B2E83?style=for-the-badge&logo=terminal&logoColor=white" />
   </a>
 </p>
 
