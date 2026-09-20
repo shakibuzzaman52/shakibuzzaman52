@@ -34,12 +34,12 @@
   </a>
 
   <a href="https://atcoder.jp/users/shakibuzzaman52">
-    <img src="https://img.shields.io/badge/AtCoder-Profile-222222?style=for-the-badge" />
-  </a>
+  &lt;/&gt;
+</a>
 
-  <a href="https://vjudge.net/user/shakibuzzaman52">
-    <img src="https://img.shields.io/badge/VJudge-Profile-4B2E83?style=for-the-badge" />
-  </a>
+<a href="https://vjudge.net/user/shakibuzzaman52">
+  &lt;/&gt;
+</a>
 </p>
 
 ---
