@@ -32,6 +32,14 @@
   <a href="https://www.codechef.com/users/shakibuzzaman">
     <img src="https://img.shields.io/badge/CodeChef-Profile-5B4638?style=for-the-badge&logo=codechef&logoColor=white" />
   </a>
+
+  <a href="https://atcoder.jp/users/shakibuzzaman52">
+    <img src="https://img.shields.io/badge/AtCoder-Profile-222222?style=for-the-badge&logo=atcoder&logoColor=white" />
+  </a>
+
+  <a href="https://vjudge.net/user/shakibuzzaman52">
+    <img src="https://img.shields.io/badge/VJudge-Profile-4B2E83?style=for-the-badge&logo=vjudge&logoColor=white" />
+  </a>
 </p>
 
 ---
