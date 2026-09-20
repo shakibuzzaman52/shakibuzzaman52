@@ -34,11 +34,11 @@
   </a>
 
   <a href="https://atcoder.jp/users/shakibuzzaman52">
-    <img src="https://img.shields.io/badge/AtCoder-Profile-222222?style=for-the-badge&logo=atcoder&logoColor=white" />
+    <img src="https://img.shields.io/badge/AtCoder-Profile-222222?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2bPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTEyIDJMMiAyMmgyMGwxMC0yMHptMCA0LjRsNS44IDEyLjJoLTExLjZMMTIgNi40eiIvPjwvc3ZnPg==&logoColor=white" />
   </a>
 
   <a href="https://vjudge.net/user/shakibuzzaman52">
-    <img src="https://img.shields.io/badge/VJudge-Profile-4B2E83?style=for-the-badge&logo=vjudge&logoColor=white" />
+    <img src="https://img.shields.io/badge/VJudge-Profile-4B2E83?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2bPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTEyIDJMMTQuOCA4aDUuMmwtMiA0LjQtMi0xLjYtMiA0LjRIMTJsLTEuOS0yLjRMMTAgMTJoMi4ybC0yLTQuNGg1LjJMMTIgMnptMCAxNS4ybC01LjQgNC44aDEwLjhMMTIgMTcuMnoiLz48L3N2Zz4=&logoColor=white" />
   </a>
 </p>
 
